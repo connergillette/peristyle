@@ -1,0 +1,19 @@
+{
+  "name": "peristyle",
+  "version": "1.0.0",
+  "description": "Showcase site for my projects in 2023.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/connergillette/peristyle.git"
+  },
+  "author": "Conner Gillette",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/connergillette/peristyle/issues"
+  },
+  "homepage": "https://github.com/connergillette/peristyle#readme"
+}
