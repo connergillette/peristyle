@@ -1,21 +1,23 @@
-export default function ProjectTile({ month, projectName, progress, color }: { month: string, projectName?: string, progress?: number, color?: string }) {
+export default function ProjectTile({ month, projectName, progress, color, next }: { month: string, projectName?: string, progress?: number, color?: string, next?: boolean }) {
 
   return (
-    <div className={`flex flex-col text-center grow shrink-0 h-32 rounded-md ${color}`}>
+    <div className={`flex flex-col text-center grow max-w-[250px] shrink-0 h-48 rounded-md ${color} text-white ${next ? ' border-dashed border-black border-4' : ''}`}>
       <div>
         {month}
       </div>
-      <div className="font-['Bely_Display'] text-2xl m-4">
+      <div className="flex grow items-center justify-center font-['Bely_Display'] text-[36px] w-full">
         {projectName}
       </div>
-      <div className="flex flex-row w-full">
-        {progress && progress < 100 && (
+      <div className={"flex flex-row w-full self-end align-center " + (progress ? '' : ' opacity-0')}>
+        {(progress || 0) < 100 && (
           <>
-            <div className="h-[5px] bg-green-400 rounded-md m-4" style={{width: `${progress}%`}}></div>
+            <div className="flex h-[12px] bg-white rounded-lg m-3 w-full pl-0.5 pr-0.5">
+              <div className="bg-green-400 h-[8px] rounded-lg p-0 m-0 self-center" style={{width: `${progress}%`}}></div>
+            </div>
             <div className="flex grow my-1 mr-3 justify-end">{progress}%</div>
           </>
         )}
-        {progress && progress === 100 && <div className="my-1 text-green-400 text-center font-bold w-full">Complete!</div>}
+        {progress === 100 && <div className="my-1 text-green-400 text-center font-bold w-full">Complete!</div>}
       </div>
     </div>
   )
