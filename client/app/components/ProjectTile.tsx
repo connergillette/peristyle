@@ -1,11 +1,11 @@
 export default function ProjectTile({ month, projectName, progress, color, next }: { month: string, projectName?: string, progress?: number, color?: string, next?: boolean }) {
 
   return (
-    <div className={`flex flex-col text-center grow max-w-[250px] shrink-0 h-48 rounded-md ${color} text-white ${next ? ' border-dashed border-black border-4' : ''}`}>
+    <div className={`flex flex-col text-center w-1/6 shrink-0 rounded-md ${color} text-white ${next ? ' border-dashed border-black border-4' : ''}`}>
       <div>
         {month}
       </div>
-      <div className="flex grow items-center justify-center font-['Bely_Display'] text-[36px] w-full">
+      <div className="flex grow items-center justify-center font-['Bely_Display'] text-2xl w-full">
         {projectName}
       </div>
       <div className={"flex flex-row w-full self-end align-center " + (progress ? '' : ' opacity-0')}>
