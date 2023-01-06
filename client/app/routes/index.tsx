@@ -3,7 +3,7 @@ import ProjectTile from "~/components/ProjectTile";
 export default function Index() {
   return (
     <div className="container mx-auto w-screen h-screen">
-      <div className="flex flex-col h-screen items-center content-center justify-center align-center gap-10 w-full" style={{ fontFamily: "Bely, system-ui, sans-serif" }}>
+      <div className="flex flex-col h-screen items-center content-center justify-center align-center gap-10 w-full">
         <div className="flex flex-row w-full justify-center gap-3 h-1/4">
           <ProjectTile month="JAN" color="bg-[#495993]" projectName="PERISTYLE" progress={20} />
           <ProjectTile month="FEB" color="bg-[#6E81C7]" projectName="TYMORRAH" next />

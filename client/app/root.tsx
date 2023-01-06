@@ -28,7 +28,7 @@ export default function App() {
         <Links />
         <link rel="stylesheet" href="https://use.typekit.net/fcx3qmb.css" />
       </head>
-      <body>
+      <body style={{ fontFamily: "Bely, system-ui, serif" }}>
         <Outlet />
         <ScrollRestoration />
         <Scripts />
