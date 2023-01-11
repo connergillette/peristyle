@@ -1,4 +1,5 @@
 import ProjectTile from "~/components/ProjectTile";
+import logo from '../assets/logo.png'
 
 export default function Index() {
   return (

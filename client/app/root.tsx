@@ -8,6 +8,7 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 import styles from "./tailwind.css"
+import logo from './assets/logo.png'
 
 export const links: LinksFunction = () => [
   { rel: 'stylesheet', href: styles },
@@ -29,6 +30,9 @@ export default function App() {
         <link rel="stylesheet" href="https://use.typekit.net/fcx3qmb.css" />
       </head>
       <body style={{ fontFamily: "Bely, system-ui, serif" }}>
+        <a href="/">
+          <img src={logo} alt="Peristyle logo" className="h-20 w-20 absolute ml-8 mt-5" />
+        </a>
         <Outlet />
         <ScrollRestoration />
         <Scripts />
