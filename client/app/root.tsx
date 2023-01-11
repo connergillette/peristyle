@@ -31,7 +31,7 @@ export default function App() {
       </head>
       <body style={{ fontFamily: "Bely, system-ui, serif" }}>
         <a href="/">
-          <img src={logo} alt="Peristyle logo" className="h-20 w-20 absolute ml-8 mt-5" />
+          <img src={logo} alt="Peristyle logo" className="h-20 w-20 fixed ml-8 mt-5" />
         </a>
         <Outlet />
         <ScrollRestoration />
