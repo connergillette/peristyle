@@ -1,7 +1,8 @@
+import { Link } from "@remix-run/react";
 
 export default function UpdateOverview ({ slug }: { slug: string }) {
   return (
-    <a href={slug}>
+    <Link to={slug}>
       <div className="flex flex-row">
         <div className="pr-3 pt-1">
           <div className="h-16 w-16 bg-gray-400 rounded-md"></div>
@@ -14,6 +15,6 @@ export default function UpdateOverview ({ slug }: { slug: string }) {
           </p>
         </div>
       </div>
-    </a>
+    </Link>
   )
 }
