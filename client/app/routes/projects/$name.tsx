@@ -14,14 +14,12 @@ export const loader = async ({ params }: LoaderArgs) => {
 export default function ProjectName () {
   const { name } = useLoaderData<typeof loader>()
 
-
-
   return (
     <div className={`text-white transition duration-500 bg-[#495993] h-full`}>
       <div className="flex flex-col container mx-auto pb-10 pt-5 h-full min-h-screen">
         <div className="flex flex-row h-min mb-5">
           <div className="w-min">
-            <h1 className="font-['Bely_Display'] text-[100px]">Peristyle</h1>
+            <h1 className="font-['Bely_Display'] text-[100px] z-10">Peristyle</h1>
             <div className="mt-[-35px]">
               <ProgressBar progress={80} />
             </div>
