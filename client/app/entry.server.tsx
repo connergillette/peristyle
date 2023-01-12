@@ -4,8 +4,13 @@ import { Response } from "@remix-run/node";
 import { RemixServer } from "@remix-run/react";
 import isbot from "isbot";
 import { renderToPipeableStream } from "react-dom/server";
+import { createClient } from "@supabase/supabase-js";
 
 const ABORT_DELAY = 5000;
+export const supabase = createClient(
+  'https://tbapjtyegqkzbhfwpjls.supabase.co',
+  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRiYXBqdHllZ3FremJoZndwamxzIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NzMyMzUyMzYsImV4cCI6MTk4ODgxMTIzNn0.DoH-dac5JsY56NS5YrykWX83g0yOhkbZM9VfGl3vyyQ'
+)
 
 export default function handleRequest(
   request: Request,

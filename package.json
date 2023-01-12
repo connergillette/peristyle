@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/connergillette/peristyle/issues"
   },
-  "homepage": "https://github.com/connergillette/peristyle#readme"
+  "homepage": "https://github.com/connergillette/peristyle#readme",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.4.0"
+  }
 }

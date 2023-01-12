@@ -1,6 +1,8 @@
 import { RemixBrowser } from "@remix-run/react";
-import { startTransition, StrictMode } from "react";
+import { createClient } from "@supabase/supabase-js";
+import { startTransition, StrictMode, createContext } from "react";
 import { hydrateRoot } from "react-dom/client";
+import {supabase, SupabaseProvider} from './contexts/SupabaseContext'
 
 function hydrate() {
   startTransition(() => {
