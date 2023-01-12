@@ -563,6 +563,10 @@ video {
   bottom: 0px;
 }
 
+.top-\[50\%\] {
+  top: 50%;
+}
+
 .m-3 {
   margin: 0.75rem;
 }
@@ -633,6 +637,26 @@ video {
   margin-top: 0.75rem;
 }
 
+.ml-auto {
+  margin-left: auto;
+}
+
+.mt-\[50\%\] {
+  margin-top: 50%;
+}
+
+.mt-\[50vh\] {
+  margin-top: 50vh;
+}
+
+.mt-\[40vh\] {
+  margin-top: 40vh;
+}
+
+.mt-\[30vh\] {
+  margin-top: 30vh;
+}
+
 .block {
   display: block;
 }
@@ -696,6 +720,10 @@ video {
 
 .h-24 {
   height: 6rem;
+}
+
+.h-96 {
+  height: 24rem;
 }
 
 .max-h-screen {
@@ -794,6 +822,22 @@ video {
 
 .animate-ping {
   animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+.snap-y {
+  scroll-snap-type: y var(--tw-scroll-snap-strictness);
+}
+
+.snap-mandatory {
+  --tw-scroll-snap-strictness: mandatory;
+}
+
+.snap-center {
+  scroll-snap-align: center;
+}
+
+.snap-always {
+  scroll-snap-stop: always;
 }
 
 .list-inside {
@@ -983,6 +1027,24 @@ video {
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
+.from-pink-200 {
+  --tw-gradient-from: #fbcfe8;
+  --tw-gradient-to: rgb(251 207 232 / 0);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.from-pink-100 {
+  --tw-gradient-from: #fce7f3;
+  --tw-gradient-to: rgb(252 231 243 / 0);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.from-pink-800 {
+  --tw-gradient-from: #9d174d;
+  --tw-gradient-to: rgb(157 23 77 / 0);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
 .to-transparent {
   --tw-gradient-to: transparent;
 }
@@ -1101,6 +1163,26 @@ video {
   padding-top: 1rem;
 }
 
+.pt-\[50\%\] {
+  padding-top: 50%;
+}
+
+.pt-\[50vh\] {
+  padding-top: 50vh;
+}
+
+.pt-10 {
+  padding-top: 2.5rem;
+}
+
+.pt-\[30vh\] {
+  padding-top: 30vh;
+}
+
+.pb-\[30vh\] {
+  padding-bottom: 30vh;
+}
+
 .text-center {
   text-align: center;
 }
@@ -1157,6 +1239,10 @@ video {
   font-size: 80pt;
 }
 
+.text-\[250px\] {
+  font-size: 250px;
+}
+
 .font-bold {
   font-weight: 700;
 }
@@ -1175,6 +1261,10 @@ video {
 
 .leading-snug {
   line-height: 1.375;
+}
+
+.leading-\[250px\] {
+  line-height: 250px;
 }
 
 .text-green-400 {

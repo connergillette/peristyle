@@ -12,17 +12,12 @@ export const loader = async ({ params }: LoaderArgs) => {
 };
 
 export default function ProjectName () {
-  const [backgroundColor, setBackgroundColor] = useState('white')
   const { name } = useLoaderData<typeof loader>()
 
-  const location = useLocation()
 
-  useEffect(() => {
-    setTimeout(() => setBackgroundColor('#495993'), 0)
-  }, [location])
 
   return (
-    <div className={`text-white transition-colors duration-500 bg-[${backgroundColor}] h-full`}>
+    <div className={`text-white transition duration-500 bg-[#495993] h-full`}>
       <div className="flex flex-col container mx-auto pb-10 pt-5 h-full min-h-screen">
         <div className="flex flex-row h-min mb-5">
           <div className="w-min">
@@ -64,10 +59,11 @@ export default function ProjectName () {
               Supabase will make some of things easier, but this will be more involved than the simple static site.
             </p>
             <div className="flex items-center justify-center flex-row text-xl gap-14 text-center mt-12 font-['Bely_Display']">
-              <div className="">TypeScript</div>
-              <div className="">React</div>
-              <div className="">Remix</div>
-              <div className="">Supabase</div>
+              <div>TypeScript</div>
+              <div>React</div>
+              <div>Tailwind</div>
+              <div>Remix</div>
+              <div>Supabase</div>
             </div>
           </div>
           <div className="flex flex-col font-['Bely_Display'] bg-white rounded-md w-[700px] p-5 h-min max-h-screen">
