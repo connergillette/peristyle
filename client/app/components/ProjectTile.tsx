@@ -8,7 +8,7 @@ export default function ProjectTile(
   return (
     <Link 
       to={`/projects/${projectName?.toLowerCase()}`} 
-      className={`flex flex-row gap-10 shrink-0 snap-always snap-center rounded-2xl ${(progress ? `${bg} text-white` : text)} ${next ? ' border-dashed border-gray-400 border-4' : ''} items-center p-10`}
+      className={`flex flex-row gap-10 shrink-0 snap-always snap-center rounded-2xl ${(progress ? `${bg} text-white` : text)} ${next ? ' border-dashed border-gray-400 border-4' : ''} items-center p-5 scale-100 hover:scale-105 transition`}
     >
       <div className="flex text-center align-center w-1/4">
         {month}
