@@ -30,6 +30,7 @@ export default function Index() {
                   text={`text-[${project.theme_color}]`} 
                   projectName={project.name?.toUpperCase() || '???'} 
                   progress={project.progress}
+                  next={project.is_next}
                 />
               ))
             }
