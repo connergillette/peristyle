@@ -4,6 +4,7 @@
   "description": "Showcase site for my projects in 2023.",
   "main": "index.js",
   "scripts": {
+    "start": "cd client && npm start",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
