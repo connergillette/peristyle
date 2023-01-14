@@ -8,8 +8,8 @@ import { createClient } from "@supabase/supabase-js";
 
 const ABORT_DELAY = 5000;
 export const supabase = createClient(
-  process.env.SUPABASE_URL || '',
-  process.env.SUPABASE_PUBLIC_KEY || ''
+  'https://tbapjtyegqkzbhfwpjls.supabase.co',
+  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRiYXBqdHllZ3FremJoZndwamxzIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NzMyMzUyMzYsImV4cCI6MTk4ODgxMTIzNn0.DoH-dac5JsY56NS5YrykWX83g0yOhkbZM9VfGl3vyyQ'
 )
 
 export default function handleRequest(
