@@ -966,8 +966,8 @@ video {
   padding-bottom: 400px;
 }
 
-.pt-\[100\%\] {
-  padding-top: 100%;
+.pt-\[170\%\] {
+  padding-top: 170%;
 }
 
 .pb-10 {
@@ -976,14 +976,6 @@ video {
 
 .pt-5 {
   padding-top: 1.25rem;
-}
-
-.pt-\[150\%\] {
-  padding-top: 150%;
-}
-
-.pt-\[170\%\] {
-  padding-top: 170%;
 }
 
 .text-center {
@@ -1074,6 +1066,21 @@ video {
 .text-black {
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
+.text-\[\#111111\] {
+  --tw-text-opacity: 1;
+  color: rgb(17 17 17 / var(--tw-text-opacity));
+}
+
+.text-\[blue\] {
+  --tw-text-opacity: 1;
+  color: rgb(0 0 255 / var(--tw-text-opacity));
+}
+
+.text-\[red\] {
+  --tw-text-opacity: 1;
+  color: rgb(255 0 0 / var(--tw-text-opacity));
 }
 
 .opacity-100 {
