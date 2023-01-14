@@ -2,5 +2,5 @@ import { supabase } from "~/entry.server";
 
 
 export async function getAllProjects() {
-  return await supabase.from('projects').select()
+  return await supabase.from('projects').select().order('id', { ascending: true })
 }
