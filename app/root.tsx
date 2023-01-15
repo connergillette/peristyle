@@ -14,6 +14,7 @@ import logo from './assets/logo-bw.png'
 
 export const links: LinksFunction = () => [
   { rel: 'stylesheet', href: styles },
+  { rel: 'stylesheet', href: 'https://use.typekit.net/fcx3qmb.css'}
 ]
 
 export const meta: MetaFunction = () => ({
@@ -28,14 +29,13 @@ export default function App() {
 
   const { pathname } = matches[matches.length - 1]
 
-  const logoBadgeStyle = `transition duration-1000 h-20 w-20 fixed ml-8 mt-5 ` + (pathname === '/' ? 'opacity-100' : 'opacity-60')
+  const logoBadgeStyle = `transition duration-1000 h-16 w-16 fixed ml-8 mt-5 ` + (pathname === '/' ? 'opacity-100' : 'opacity-60')
 
   return (
     <html lang="en">
       <head>
         <Meta />
         <Links />
-        <link rel="stylesheet" href="https://use.typekit.net/fcx3qmb.css" />
       </head>
       <body style={{ fontFamily: "Bely, system-ui, serif" }}>
         <Link to="/">

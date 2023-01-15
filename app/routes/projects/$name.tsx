@@ -16,7 +16,7 @@ export default function ProjectName () {
 
   return (
     <div className={`text-white transition duration-500 bg-[#495993] h-full`}>
-      <div className="flex flex-col container mx-auto pb-10 pt-5 h-full min-h-screen">
+      <div className="flex flex-col container w-10/12 mx-auto pb-10 pt-5 h-full min-h-screen">
         <div className="flex flex-row h-min mb-5">
           <div className="w-min">
             <h1 className="font-['Bely_Display'] text-[100px] z-10">Peristyle</h1>
