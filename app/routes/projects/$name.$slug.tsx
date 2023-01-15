@@ -16,7 +16,7 @@ export default function Update () {
       <div className="bg-white bg-opacity-10 w-screen p-20">
         <div className="container text-center w-full mx-auto">
           <h4 className="text-lg">JAN 10, 2023</h4>
-          <h1 className="w-fulltext-center text-[80pt] font-['Bely_Display'] leading-snug">{slug}: Long Update Title That Tests Layout Limits Even Further</h1>
+          <h1 className="w-fulltext-center text-[80pt] font-['bely'] leading-snug">{slug}: Long Update Title That Tests Layout Limits Even Further</h1>
         </div>
       </div>
       <div className="flex flex-col items-center justify-center container mx-auto p-20 h-min">

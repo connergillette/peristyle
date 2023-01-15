@@ -4,22 +4,24 @@ import { Link, useLoaderData, useLocation } from "@remix-run/react"
 import { useEffect, useState } from "react";
 import ProgressBar from "~/components/ProgressBar";
 import UpdateOverview from "~/components/UpdateOverview";
+import { getUpdatesByProject } from "~/models/projects.server";
 
 import peristyle from '../../assets/peristyle.png'
 
 export const loader = async ({ params }: LoaderArgs) => {
-  return json({ name: params.name })
+  console.log(params)
+  return json({ name: params.name, updates: (await getUpdatesByProject(params.name)).data || [] })
 };
 
 export default function ProjectName () {
-  const { name } = useLoaderData<typeof loader>()
-
+  const { name, updates } = useLoaderData<typeof loader>()
+  
   return (
     <div className={`text-white transition duration-500 bg-[#495993] h-full`}>
       <div className="flex flex-col container w-10/12 mx-auto pb-10 pt-5 h-full min-h-screen">
         <div className="flex flex-row h-min mb-5">
           <div className="w-min">
-            <h1 className="font-['Bely_Display'] text-[100px] z-10">Peristyle</h1>
+            <h1 className="font-['bely-display'] text-[100px] z-10">Peristyle</h1>
             <div className="mt-[-35px]">
               <ProgressBar progress={80} />
             </div>
@@ -56,7 +58,7 @@ export default function ProjectName () {
               A stretch goal for this project is to also include basic CMS-like features, which includes authentication, page creation / editing, etc.
               Supabase will make some of things easier, but this will be more involved than the simple static site.
             </p>
-            <div className="flex items-center justify-center flex-row text-xl gap-14 text-center mt-12 font-['Bely_Display']">
+            <div className="flex items-center justify-center flex-row text-xl gap-14 text-center mt-12 font-['bely-display']">
               <div>TypeScript</div>
               <div>React</div>
               <div>Tailwind</div>
@@ -64,14 +66,17 @@ export default function ProjectName () {
               <div>Supabase</div>
             </div>
           </div>
-          <div className="flex flex-col font-['Bely_Display'] bg-white rounded-md w-[700px] p-5 h-min max-h-screen">
+          <div className="flex flex-col font-['bely-display'] bg-white rounded-md w-[700px] p-5 h-min max-h-screen">
             <h2 className="text-2xl mb-3">Updates</h2>
             <div className="flex flex-col grow gap-3 overflow-y-scroll scroll-smooth w-full h-min">
-                <UpdateOverview slug={`/projects/${name}/update-1`} />
+              {
+                updates.map((update: object) => <UpdateOverview key={update.id} slug={`/projects/${name}/${update.slug}`} update={update} /> )
+              }
+                {/* <UpdateOverview slug={`/projects/${name}/update-1`} />
                 <UpdateOverview slug={`/projects/${name}/update-2`} />
                 <UpdateOverview slug={`/projects/${name}/update-3`} />
                 <UpdateOverview slug={`/projects/${name}/update-4`} />
-                <UpdateOverview slug={`/projects/${name}/update-5`} />
+                <UpdateOverview slug={`/projects/${name}/update-5`} /> */}
             </div>
             <div className="h-32 mt-[-64px] block bottom-0 bg-gradient-to-t from-white to-transparent"></div>
             {/* TODO: Potentially unused */}

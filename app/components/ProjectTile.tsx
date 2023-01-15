@@ -17,9 +17,9 @@ export default function ProjectTile(
       <div className="flex text-center align-center w-1/4">
         {month}
       </div>
-      <span className="flex flex-col font-['Bely_Display'] text-2xl w-full h-full">
+      <span className="flex flex-col font-['bely-display'] text-2xl w-full h-full">
         {projectName}
-        <div className={`${(progress ? `text-white` : `text-gray-400`)} font-['Bely'] text-base`}>
+        <div className={`${(progress ? `text-white` : `text-gray-400`)} font-['bely'] text-base`}>
           {description || "This is the project description."}
         </div>
       </span>

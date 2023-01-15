@@ -1,17 +1,19 @@
 import { Link } from "@remix-run/react";
 
-export default function UpdateOverview ({ slug }: { slug: string }) {
+export default function UpdateOverview ({ update, slug }: { update: object, slug: string }) {
   return (
     <Link to={slug}>
       <div className="flex flex-row">
         <div className="pr-3 pt-1">
-          <div className="h-16 w-16 bg-gray-400 rounded-md"></div>
+          <div className="h-16 w-16 border-solid border-2 border-gray-400 rounded-md ">
+            <img className="h-full w-full object-cover rounded-md" src={update.main_image_url} alt={update.title} />
+          </div>
         </div>
         <div>
-          <h4 className="font-['Bely']">JAN 06, 2023</h4>
-          <h3>Update Title</h3>
-          <p className="font-['Bely'] text-gray-400">
-            This is preview text for the update in question.
+          <h4 className="font-['bely']">{new Date(update.created_at).toLocaleDateString()}</h4>
+          <h3>{update.title}</h3>
+          <p className="font-['bely'] text-gray-400">
+            {update.body.split('.')[0]}
           </p>
         </div>
       </div>

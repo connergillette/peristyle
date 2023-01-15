@@ -2,7 +2,7 @@ import UpdateOverview from "~/components/UpdateOverview";
 
 export default function UpdateIndex () {
   return (
-    <div className="flex flex-col font-['Bely_Display'] bg-white rounded-md w-[700px] p-5">
+    <div className="flex flex-col font-['bely-display'] bg-white rounded-md w-[700px] p-5">
       <h2 className="text-2xl mb-3">Updates</h2>
       <div className="flex flex-col gap-3">
         <UpdateOverview slug={`/${name}/update-1`} />

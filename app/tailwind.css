@@ -853,8 +853,20 @@ video {
   border-radius: 0.375rem;
 }
 
+.rounded-sm {
+  border-radius: 0.125rem;
+}
+
 .border-4 {
   border-width: 4px;
+}
+
+.border-2 {
+  border-width: 2px;
+}
+
+.border-solid {
+  border-style: solid;
 }
 
 .border-dashed {
@@ -912,6 +924,16 @@ video {
 
 .to-transparent {
   --tw-gradient-to: transparent;
+}
+
+.object-cover {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.object-fill {
+  -o-object-fit: fill;
+     object-fit: fill;
 }
 
 .p-0 {
@@ -980,6 +1002,14 @@ video {
 
 .font-\[\'Bely\'\] {
   font-family: 'Bely';
+}
+
+.font-\[\'bely\'\] {
+  font-family: 'bely';
+}
+
+.font-\[\'bely-display\'\] {
+  font-family: 'bely-display';
 }
 
 .text-2xl {
