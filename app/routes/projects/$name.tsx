@@ -9,13 +9,12 @@ import { getUpdatesByProject } from "~/models/projects.server";
 import peristyle from '../../assets/peristyle.png'
 
 export const loader = async ({ params }: LoaderArgs) => {
-  console.log(params)
-  return json({ name: params.name, updates: (await getUpdatesByProject(params.name)).data || [] })
+  return json({ name: params.name, updates: (await getUpdatesByProject(params.name)) || [] })
 };
 
 export default function ProjectName () {
   const { name, updates } = useLoaderData<typeof loader>()
-  
+
   return (
     <div className={`text-white transition duration-500 bg-[#495993] h-full`}>
       <div className="flex flex-col container w-10/12 mx-auto pb-10 pt-5 h-full min-h-screen">
@@ -72,11 +71,6 @@ export default function ProjectName () {
               {
                 updates.map((update: object) => <UpdateOverview key={update.id} slug={`/projects/${name}/${update.slug}`} update={update} /> )
               }
-                {/* <UpdateOverview slug={`/projects/${name}/update-1`} />
-                <UpdateOverview slug={`/projects/${name}/update-2`} />
-                <UpdateOverview slug={`/projects/${name}/update-3`} />
-                <UpdateOverview slug={`/projects/${name}/update-4`} />
-                <UpdateOverview slug={`/projects/${name}/update-5`} /> */}
             </div>
             <div className="h-32 mt-[-64px] block bottom-0 bg-gradient-to-t from-white to-transparent"></div>
             {/* TODO: Potentially unused */}
