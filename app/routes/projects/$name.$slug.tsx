@@ -5,6 +5,8 @@ import { useLoaderData } from '@remix-run/react'
 import logo from "~/assets/logo-bw.png"
 import { getUpdateBySlug } from '~/models/projects.server'
 
+const md = require('markdown-it')('commonmark')
+
 export const loader = async ({ params }: LoaderArgs) => {
   const {name, slug} = params
   return json({ update: (await getUpdateBySlug(params.name, params.slug)), name, slug })
@@ -17,7 +19,7 @@ export default function Update () {
     <div className="text-white bg-[#495993] h-full min-h-screen overflow-hidden">
       <div className="bg-white bg-opacity-10 w-screen p-20">
         <div className="container text-center w-full mx-auto">
-          <h4 className="text-lg">JAN 10, 2023</h4>
+          <h4 className="text-lg">{new Date(update.created_at).toLocaleDateString()}</h4>
           <h1 className="w-fulltext-center text-[80pt] font-['bely'] leading-snug">{update.title}</h1>
         </div>
       </div>
@@ -25,8 +27,7 @@ export default function Update () {
         <div className="flex w-full items-center justify-center pt-10">
           <img src={update.main_image_url} className="flex items-center align-center w-8/12 rounded-md" alt={update.title} />
         </div>
-        <div className="container w-8/12 mx-auto text-2xl flex flex-col gap-8 leading-relaxedm p-10">
-          {update.body}
+        <div className="container w-8/12 mx-auto text-2xl flex flex-col gap-8 leading-relaxedm p-10" dangerouslySetInnerHTML={{__html: md.render(update.body)}}>
         </div>
         <div>
           <img src={logo} alt="Peristyle logo" className="h-16 w-16 m-12" />
