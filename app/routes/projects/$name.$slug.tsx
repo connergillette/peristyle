@@ -27,7 +27,10 @@ export default function Update () {
         <div className="flex w-full items-center justify-center pt-10">
           <img src={update.main_image_url} className="flex items-center align-center w-8/12 rounded-md" alt={update.title} />
         </div>
-        <div className="container w-8/12 mx-auto text-2xl flex flex-col gap-8 leading-relaxedm p-10" dangerouslySetInnerHTML={{__html: md.render(update.body)}}>
+        <div className="container mx-auto text-2xl flex flex-col items-center gap-8 leading-relaxedm p-10">
+          <article className="prose prose-lg prose-invert" dangerouslySetInnerHTML={{__html: md.render(update.body)}}>
+            
+          </article>
         </div>
         <div>
           <img src={logo} alt="Peristyle logo" className="h-16 w-16 m-12" />
