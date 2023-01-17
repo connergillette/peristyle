@@ -1600,6 +1600,18 @@ p {
   margin-top: 0.5rem;
 }
 
+.mb-\[1000px\] {
+  margin-bottom: 1000px;
+}
+
+.mb-\[100\%\] {
+  margin-bottom: 100%;
+}
+
+.mt-\[100\%\] {
+  margin-top: 100%;
+}
+
 .block {
   display: block;
 }
@@ -1647,6 +1659,27 @@ p {
 
 .h-32 {
   height: 8rem;
+}
+
+.h-\[120\%\] {
+  height: 120%;
+}
+
+.h-\[120vh\] {
+  height: 120vh;
+}
+
+.h-\[150\%\] {
+  height: 150%;
+}
+
+.h-max {
+  height: -moz-max-content;
+  height: max-content;
+}
+
+.h-\[150vh\] {
+  height: 150vh;
 }
 
 .max-h-screen {
@@ -1939,6 +1972,18 @@ p {
 
 .pt-5 {
   padding-top: 1.25rem;
+}
+
+.pb-\[1000px\] {
+  padding-bottom: 1000px;
+}
+
+.pb-\[100\%\] {
+  padding-bottom: 100%;
+}
+
+.pb-\[25vh\] {
+  padding-bottom: 25vh;
 }
 
 .text-center {

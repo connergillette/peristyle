@@ -20,7 +20,7 @@ export default function ProjectTile(
       <span className="flex flex-col font-['bely-display'] text-2xl w-full h-full">
         {projectName}
         <div className={`${(progress ? `text-white` : `text-gray-400`)} font-['bely'] text-base`}>
-          {description || "This is the project description."}
+          {description}
         </div>
       </span>
       <div className={`${(progress ? '' : 'opacity-0')} grow w-full`}>
