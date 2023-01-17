@@ -29,7 +29,7 @@ export default function Index() {
         </div>
         <div className="flex flex-col w-[60%] h-[150vh] items-center content-center justify-center align-center gap-10 ml-auto">
           <div className="h-24 w-full fixed top-0 bg-gradient-to-t from-transparent to-white z-10"></div>
-          <div className="flex flex-col gap-3 snap-y snap-mandatory ml-auto w-10/12 pt-[100vh] pb-[25vh]">
+          <div className="flex flex-col gap-3 snap-y snap-mandatory ml-auto w-10/12 pt-[40%] pb-[25vh]">
             {
               projects && projects.map((project) => (
                 <ProjectTile
