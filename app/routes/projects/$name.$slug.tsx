@@ -17,10 +17,11 @@ export default function Update () {
 
   return (
     <div className="text-white bg-[#495993] h-full min-h-screen overflow-hidden">
-      <div className="bg-white bg-opacity-10 w-screen p-20">
+      <div className="bg-white bg-opacity-10 w-screen p-20 pb-10">
         <div className="container text-center w-full mx-auto">
           <h4 className="text-lg">{new Date(update.created_at).toLocaleDateString()}</h4>
           <h1 className="w-fulltext-center text-[80pt] font-['bely'] leading-snug">{update.title}</h1>
+          <h2>{update.preview_line}</h2>
         </div>
       </div>
       <div className="flex flex-col items-center justify-center container mx-auto h-min">

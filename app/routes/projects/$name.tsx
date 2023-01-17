@@ -4,7 +4,7 @@ import { Link, useLoaderData, useLocation } from "@remix-run/react"
 import { useEffect, useState } from "react";
 import ProgressBar from "~/components/ProgressBar";
 import UpdateOverview from "~/components/UpdateOverview";
-import { getUpdatesByProject } from "~/models/projects.server";
+import { getUpdatesByProject, Update } from "~/models/projects.server";
 
 import peristyle from '../../assets/peristyle.png'
 
@@ -69,7 +69,7 @@ export default function ProjectName () {
             <h2 className="text-2xl mb-3">Updates</h2>
             <div className="flex flex-col grow gap-3 overflow-y-scroll scroll-smooth w-full h-min">
               {
-                updates.map((update: object) => <UpdateOverview key={update.id} slug={`/projects/${name}/${update.slug}`} update={update} /> )
+                updates.map((update: Update) => update && <UpdateOverview key={update.id} slug={`/projects/${name}/${update.slug}`} update={update} /> )
               }
             </div>
             <div className="h-32 mt-[-64px] block bottom-0 bg-gradient-to-t from-white to-transparent"></div>

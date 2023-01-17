@@ -1,6 +1,7 @@
 import { Link } from "@remix-run/react";
+import { Update } from "~/models/projects.server";
 
-export default function UpdateOverview ({ update, slug }: { update: object, slug: string }) {
+export default function UpdateOverview ({ update, slug }: { update: Update, slug: string }) {
   return (
     <Link to={slug}>
       <div className="flex flex-row">
@@ -13,7 +14,7 @@ export default function UpdateOverview ({ update, slug }: { update: object, slug
           <h4 className="font-['bely']">{new Date(update.created_at).toLocaleDateString()}</h4>
           <h3>{update.title}</h3>
           <p className="font-['bely'] text-gray-400">
-            {update.body.split('.')[0]}
+            {update.preview_line}
           </p>
         </div>
       </div>

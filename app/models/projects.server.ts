@@ -1,7 +1,27 @@
 import { supabase } from "~/entry.server";
 
 export type Project = {
-  
+  id: number,
+  created_at: Date,
+  description: string,
+  details: string,
+  is_next: boolean,
+  label: string,
+  name: string,
+  progress: number, // between 0 and 100, inclusive
+  slug: string,
+  theme_color: string
+}
+
+export type Update = {
+  id: number,
+  created_at: Date,
+  title: string,
+  slug: string,
+  body: string,
+  project_id: string,
+  preview_line: string,
+  main_image_url: string
 }
 
 export async function getAllProjects() {
@@ -10,14 +30,31 @@ export async function getAllProjects() {
 
 export async function getUpdatesByProject(projectName: string) {
   const project = (await getProjectBySlug(projectName))
-  return (await supabase.from('updates').select().eq('project_id', project.id)).data
+  if (project) {
+    const response = await supabase.from('updates').select().eq('project_id', project.id)
+    if (!response.error) {
+      return response.data
+    }
+  }
+  return [] // TODO: Do something smarter than this when error returned
 }
 
 export async function getUpdateBySlug(projectName: string, slug: string) {
   const project = await getProjectBySlug(projectName)
-  return (await supabase.from('updates').select().eq('project_id', project.id).eq('slug', slug)).data[0]
+  if (project) {
+    const response = await supabase.from('updates').select().eq('project_id', project.id).eq('slug', slug)
+    if (!response.error) {
+      return response.data[0]
+    }
+  }
+
+  return null // TODO: Do something smarter than this when error returned
 }
 
-async function getProjectBySlug(name: string) {
-  return (await supabase.from('projects').select().eq('slug', name)).data[0]
+async function getProjectBySlug(name: string) : Promise<Project | null> {
+  const response = await supabase.from('projects').select().eq('slug', name)
+  if (!response.error) {
+    return response.data[0]
+  }
+  return null // TODO: Do something smarter than this when error returned
 }

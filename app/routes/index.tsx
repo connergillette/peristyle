@@ -19,7 +19,6 @@ export default function Index() {
     setTransitionProgress(true)
   }, [location])
 
-
   return (
     <div className={`w-screen h-screen overflow-x-hidden`}>
       <div className={`container mx-auto flex h-screen`}>
