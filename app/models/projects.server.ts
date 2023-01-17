@@ -10,7 +10,8 @@ export type Project = {
   name: string,
   progress: number, // between 0 and 100, inclusive
   slug: string,
-  theme_color: string
+  theme_color: string,
+  tech_items: string,
 }
 
 export type Update = {
@@ -51,7 +52,7 @@ export async function getUpdateBySlug(projectName: string, slug: string) {
   return null // TODO: Do something smarter than this when error returned
 }
 
-async function getProjectBySlug(name: string) : Promise<Project | null> {
+export async function getProjectBySlug(name: string) : Promise<Project | null> {
   const response = await supabase.from('projects').select().eq('slug', name)
   if (!response.error) {
     return response.data[0]

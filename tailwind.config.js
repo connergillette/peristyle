@@ -12,9 +12,10 @@ module.exports = {
     plugin(function({ addBase, theme }) {
       addBase({
         'h1': { fontSize: theme('fontSize.2xl') },
-        'h2': { fontSize: theme('fontSize.xl') },
+        'h2': { fontSize: theme('fontSize.xl'), fontFamily: 'bely-display' },
         'h3': { fontSize: theme('fontSize.lg') },
         'p': { fontSize: theme('fontsize.md') },
+        'li': { listStyleType: 'disc', color: 'white' }
       })
     })
   ]

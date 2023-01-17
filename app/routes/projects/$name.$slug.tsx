@@ -21,7 +21,7 @@ export default function Update () {
         <div className="container text-center w-full mx-auto">
           <h4 className="text-lg">{new Date(update.created_at).toLocaleDateString()}</h4>
           <h1 className="w-fulltext-center text-[80pt] font-['bely'] leading-snug">{update.title}</h1>
-          <h2>{update.preview_line}</h2>
+          <h2 className="font-['bely']">{update.preview_line}</h2>
         </div>
       </div>
       <div className="flex flex-col items-center justify-center container mx-auto h-min">
@@ -29,7 +29,7 @@ export default function Update () {
           <img src={update.main_image_url} className="flex items-center align-center w-8/12 rounded-md" alt={update.title} />
         </div>
         <div className="container mx-auto text-2xl flex flex-col items-center gap-8 leading-relaxedm p-10">
-          <article className="prose prose-lg prose-invert" dangerouslySetInnerHTML={{__html: md.render(update.body)}}>
+          <article className="w-10/12 prose-lg prose-invert" dangerouslySetInnerHTML={{__html: md.render(update.body)}}>
             
           </article>
         </div>
