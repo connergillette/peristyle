@@ -14,9 +14,9 @@ export default function ProgressBar ({ progress }: { progress: number }) {
     <>
       {(progress || 0) < 100 && (
         <div className="flex flex-row">
-          <div className="flex h-[12px] bg-white opacity-70 rounded-lg m-3 w-full pl-0.5 pr-0.5">
+          <div className="flex h-[12px] bg-white opacity-70 rounded-lg m-3 w-full pl-0.5 pr-0.5 max-xl:h-[8px]">
             <div 
-              className={`transition bg-green-400 h-[8px] rounded-lg p-0 m-0 self-center`} 
+              className={`transition bg-green-400 h-[8px] max-xl:h-[6px] rounded-lg p-0 m-0 self-center`} 
               style={{width: `${transitionProgress}%`, transition: 'width', transitionDuration: `${ progress * 10 }ms`}}
             ></div>
           </div>
