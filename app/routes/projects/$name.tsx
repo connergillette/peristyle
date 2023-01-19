@@ -53,11 +53,11 @@ export default function ProjectName () {
                 <div className="h-32 w-full absolute bottom-0 bg-gradient-to-t from-[#fffcf5] to-transparent select-none pointer-events-none rounded-md"></div>
               </div>
             </div>
-            <div className="text-white w-8/12">
+            <div className="text-white w-8/12 max-xl:w-full">
               <article className="p-5 pt-10 prose-lg prose-invert" dangerouslySetInnerHTML={{__html: md.render(project.details)}}/>
-              <div className="flex flex-row text-xl gap-14 mt-12 font-['bely-display'] p-5">
+              <div className="flex flex-row text-xl gap-x-1 gap-y-3 align-center mt-12 font-['bely-display'] p-5 w-full flex-wrap justify-evenly">
                 {
-                  project.tech_items.split(',').map(techItem => <div key={techItem.trim()}>{techItem.trim()}</div>)
+                  project.tech_items.split(',').map(techItem => <div key={techItem.trim()} className="flex rounded-md bg-white bg-opacity-30 px-5 py-3">{techItem.trim()}</div>)
                 }
               </div>
             </div>

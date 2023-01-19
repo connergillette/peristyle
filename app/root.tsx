@@ -29,7 +29,7 @@ export default function App() {
 
   const { pathname } = matches[matches.length - 1]
 
-  const logoBadgeStyle = `transition duration-1000 h-16 w-16 max-xl:w-12 max-xl:h-12 fixed ml-8 mt-5 max-xl:ml-4 max-xl:mt-2 ` + (pathname === '/' ? 'opacity-100' : 'opacity-60')
+  const logoBadgeStyle = `transition duration-1000 h-16 w-16 max-xl:w-12 max-xl:h-12 fixed ml-8 mt-5 max-xl:ml-4 max-xl:mt-2 z-20 ` + (pathname === '/' ? 'opacity-100' : 'opacity-60')
 
   return (
     <html lang="en">

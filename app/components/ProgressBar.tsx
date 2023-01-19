@@ -12,7 +12,7 @@ export default function ProgressBar ({ progress }: { progress: number }) {
 
   return (
     <>
-      {(progress || 0) < 100 && (
+      {progress && progress > 0 && progress < 100 && (
         <div className="flex flex-row">
           <div className="flex h-[12px] bg-white opacity-70 rounded-lg m-3 w-full pl-0.5 pr-0.5 max-xl:h-[8px]">
             <div 
