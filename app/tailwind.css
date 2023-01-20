@@ -905,6 +905,16 @@ li {
   margin-right: auto;
 }
 
+.my-10 {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.my-20 {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
 .ml-8 {
   margin-left: 2rem;
 }
@@ -977,6 +987,14 @@ li {
   margin-bottom: 300px;
 }
 
+.mt-10 {
+  margin-top: 2.5rem;
+}
+
+.mb-10 {
+  margin-bottom: 2.5rem;
+}
+
 .block {
   display: block;
 }
@@ -1043,6 +1061,14 @@ li {
   height: max-content;
 }
 
+.h-12 {
+  height: 3rem;
+}
+
+.h-56 {
+  height: 14rem;
+}
+
 .min-h-screen {
   min-height: 100vh;
 }
@@ -1103,6 +1129,22 @@ li {
 
 .w-\[200\%\] {
   width: 200%;
+}
+
+.w-1\/2 {
+  width: 50%;
+}
+
+.w-5 {
+  width: 1.25rem;
+}
+
+.w-10 {
+  width: 2.5rem;
+}
+
+.w-12 {
+  width: 3rem;
 }
 
 .max-w-\[700px\] {
@@ -1291,6 +1333,11 @@ li {
   border-color: rgb(243 244 246 / var(--tw-border-opacity));
 }
 
+.border-black {
+  --tw-border-opacity: 1;
+  border-color: rgb(0 0 0 / var(--tw-border-opacity));
+}
+
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
@@ -1326,12 +1373,29 @@ li {
   background-color: rgb(96 165 250 / var(--tw-bg-opacity));
 }
 
+.bg-\[\] {
+  background-color: ;
+}
+
+.bg-yellow-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(234 179 8 / var(--tw-bg-opacity));
+}
+
 .bg-opacity-10 {
   --tw-bg-opacity: 0.1;
 }
 
 .bg-opacity-30 {
   --tw-bg-opacity: 0.3;
+}
+
+.bg-opacity-70 {
+  --tw-bg-opacity: 0.7;
+}
+
+.bg-opacity-40 {
+  --tw-bg-opacity: 0.4;
 }
 
 .bg-gradient-to-t {
@@ -1433,6 +1497,11 @@ li {
 .py-3 {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
+}
+
+.py-20 {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
 }
 
 .pl-0\.5 {
@@ -1583,6 +1652,10 @@ li {
   padding-top: 80%;
 }
 
+.pt-20 {
+  padding-top: 5rem;
+}
+
 .text-center {
   text-align: center;
 }
@@ -1632,6 +1705,10 @@ li {
   line-height: 1.75rem;
 }
 
+.text-\[70px\] {
+  font-size: 70px;
+}
+
 .font-bold {
   font-weight: 700;
 }
@@ -1642,6 +1719,10 @@ li {
 
 .leading-snug {
   line-height: 1.375;
+}
+
+.leading-\[70px\] {
+  line-height: 70px;
 }
 
 .text-green-400 {
@@ -1667,6 +1748,11 @@ li {
 .text-\[\#333333\] {
   --tw-text-opacity: 1;
   color: rgb(51 51 51 / var(--tw-text-opacity));
+}
+
+.text-black {
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
 .opacity-100 {

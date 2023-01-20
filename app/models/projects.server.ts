@@ -1,4 +1,7 @@
+import { createClient } from "@supabase/supabase-js";
 import { supabase } from "~/entry.server";
+import dotenv from 'dotenv'
+dotenv.config()
 
 export type Project = {
   id: number,
@@ -58,4 +61,30 @@ export async function getProjectBySlug(name: string) : Promise<Project | null> {
     return response.data[0]
   }
   return null // TODO: Do something smarter than this when error returned
+}
+
+export async function updateProjectById(formData: FormData) {
+  const providedServiceKey = formData.get('service_key')
+  if (providedServiceKey !== process.env.SUPABASE_SERVICE_KEY) {
+    return 'bad'
+  }
+
+  const supabase = createClient(process.env.SUPABASE_URL || '', formData.get('service_key') || '')
+
+  const response = await supabase.from('projects').update({
+    name: formData.get('name'),
+    slug: formData.get('slug'),
+    label: formData.get('label'),
+    description: formData.get('description'),
+    progress: formData.get('progress'),
+    is_next: formData.get('is_next'),
+    theme_color: formData.get('theme_color'),
+    details: formData.get('details'),
+    tech_items: formData.get('tech_items'),
+  }).eq('id', formData.get('id'))
+
+  if (!response.error) {
+    console.log('success!')
+  }
+  console.log(response.error)
 }
