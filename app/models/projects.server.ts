@@ -1,6 +1,6 @@
 import { createClient } from "@supabase/supabase-js";
 import { supabase } from "~/entry.server";
-import dotenv from 'dotenv'
+const dotenv = require('dotenv')
 dotenv.config()
 
 export type Project = {
