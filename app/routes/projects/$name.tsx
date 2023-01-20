@@ -36,9 +36,7 @@ export default function ProjectName () {
             <div className="flex flex-row max-xl:flex-col gap-5">
                 <Link to="/" className="w-8/12 max-xl:w-full">
                   {
-                    project.image_url && (
-                    <img src={project?.image_url} alt={`${project.name} home screen`} className="w-full h-auto rounded-md" />
-                    )
+                    <img src={peristyle} alt={`${project.name} home screen`} className="w-full h-auto rounded-md" />
                   }
                 </Link>
               <div className="flex flex-col font-['bely-display'] relative bg-white rounded-md max-xl:w-full w-4/12 min-h-[400px]">
