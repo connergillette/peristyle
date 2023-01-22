@@ -32,12 +32,17 @@ export default function ProjectName () {
         </div>
         <div className="flex h-full overflow-hidden text-[#333333] mb-5 gap-5">
           <div className="flex flex-col w-full rounded-md">
-            <div className="flex flex-row max-xl:flex-col gap-5">
-                <Link to="/" className="w-8/12 max-xl:w-full">
-                  {
-                    <img src={project?.image_url} alt={`${project.name} home screen`} className="w-full h-auto rounded-md" />
-                  }
-                </Link>
+            <div className="flex flex-row max-xl:flex-col gap-5 justify-center">
+              {
+                project?.image_url && (
+                  <Link to="/" className="w-8/12 max-xl:w-full">
+                    {
+                      <img src={project?.image_url} alt={`${project.name} home screen`} className="w-full h-auto rounded-md" />
+                    }
+                  </Link>
+                )
+              }
+                
               <div className="flex flex-col font-['bely-display'] relative bg-white rounded-md max-xl:w-full w-4/12 min-h-[400px]">
                 <div className="p-5">
                   <h2 className="text-2xl mb-3">Updates</h2>

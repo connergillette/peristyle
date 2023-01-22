@@ -1,5 +1,5 @@
 import { Link } from "@remix-run/react";
-import { Update } from "~/models/projects.server";
+import type { Update } from "~/models/projects.server";
 
 export default function UpdateOverview ({ update, slug }: { update: Update, slug: string }) {
   return (

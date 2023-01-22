@@ -20,7 +20,7 @@ export default function Update () {
       <div className="bg-white bg-opacity-10 w-screen p-20 pb-10">
         <div className="container text-center w-full mx-auto">
           <h4 className="text-lg">{new Date(update.created_at).toLocaleDateString()}</h4>
-          <h1 className="w-fulltext-center text-[80pt] font-['bely'] leading-snug max-xl:text-[36pt] max-xl:font-bold">{update.title}</h1>
+          <h1 className="w-full text-center text-[64pt] font-['bely'] leading-snug max-xl:text-[36pt] max-xl:font-bold">{update.title}</h1>
           <h2 className="font-['bely']">{update.preview_line}</h2>
         </div>
       </div>

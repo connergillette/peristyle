@@ -26,8 +26,10 @@ export default function Index() {
           <div className="max-xl:mx-auto max-xl:w-full ml-auto">
             <h1 className={`text-[200px] leading-[200px] max-xl:text-[75px] max-xl:leading-[75px] text-center`}>2023</h1>
             <h2 className="text-center text-2xl">Project-A-Month</h2>
-            <Link to="/about">
-              <h3 className="font-['bely'] mt-3 text-2xl transition hover:scale-105">Conner Gillette</h3>
+            <Link to="/about" className="flex text-center mt-3 align-center justify-center">
+              <div className="flex text-center hover:text-white hover:drop-shadow-md max-w-[200px] hover:bg-teal-400 px-5 py-3 transition hover:scale-105 rounded-md">
+                <h3 className="font-['bely'] text-2xl">Conner Gillette</h3>
+              </div>
             </Link>
           </div>
         </div>
