@@ -17,6 +17,8 @@ module.exports = {
         'h3': { fontSize: theme('fontSize.lg') },
         'p': { fontSize: theme('fontsize.md') },
         'li': { listStyleType: 'disc', color: 'white', margin: '2px 0px 2px 0px !important' },
+        '.scrollbar-hide::-webkit-scrollbar': { display: 'none' },
+        '.scrollbar-hide': { '-ms-overflow-style': 'none', 'scrollbar-width': 'none' },
       })
     })
   ]
