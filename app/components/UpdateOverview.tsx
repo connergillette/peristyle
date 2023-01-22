@@ -1,6 +1,5 @@
 import { Link } from "@remix-run/react";
 import { Update } from "~/models/projects.server";
-import peristyle from '../assets/peristyle.png'
 
 export default function UpdateOverview ({ update, slug }: { update: Update, slug: string }) {
   return (
@@ -8,7 +7,7 @@ export default function UpdateOverview ({ update, slug }: { update: Update, slug
       <div className="flex flex-row rounded-md">
         <div className="pr-3 pt-1">
           <div className="h-16 w-16 border-solid border-2 border-gray-400 rounded-md">
-            <img className="h-full w-full object-cover rounded-md" src={peristyle} alt={update.title} />
+            <img className="h-full w-full object-cover rounded-md" src={update.main_image_url} alt={update.title} />
           </div>
         </div>
         <div>

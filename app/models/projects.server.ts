@@ -35,7 +35,7 @@ export async function getAllProjects() {
 export async function getUpdatesByProject(projectName: string) {
   const project = (await getProjectBySlug(projectName))
   if (project) {
-    const response = await supabase.from('updates').select().eq('project_id', project.id)
+    const response = await supabase.from('updates').select().eq('project_id', project.id).order('id', { ascending: false })
     if (!response.error) {
       return response.data
     }

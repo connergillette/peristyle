@@ -1,4 +1,3 @@
-import peristyle from '../../assets/peristyle.png'
 import type { LoaderArgs } from "@remix-run/node"
 import { json } from "@remix-run/node"
 import { Link, useLoaderData, useLocation } from "@remix-run/react"
@@ -22,7 +21,7 @@ export default function ProjectName () {
       <div className="flex flex-col container w-10/12 mx-auto pb-10 pt-16 h-full min-h-screen">
         <div className="flex max-xl:flex-col h-min mb-5">
           <div className="w-min">
-            <h1 className="font-['bely-display'] text-[100px] max-xl:text-[50px] z-10">{project.name}</h1>
+            <h1 className="font-['bely-display'] text-[100px] max-xl:text-[50px] z-10 drop-shadow-xl">{project.name}</h1>
             <div className="mt-[-35px] max-xl:mt-[-20px]">
               <ProgressBar progress={project?.progress} />
             </div>
@@ -36,7 +35,7 @@ export default function ProjectName () {
             <div className="flex flex-row max-xl:flex-col gap-5">
                 <Link to="/" className="w-8/12 max-xl:w-full">
                   {
-                    <img src={peristyle} alt={`${project.name} home screen`} className="w-full h-auto rounded-md" />
+                    <img src={project?.image_url} alt={`${project.name} home screen`} className="w-full h-auto rounded-md" />
                   }
                 </Link>
               <div className="flex flex-col font-['bely-display'] relative bg-white rounded-md max-xl:w-full w-4/12 min-h-[400px]">

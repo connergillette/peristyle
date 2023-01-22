@@ -32,8 +32,8 @@ export default function Index() {
           </div>
         </div>
         <div className="relative max-xl:top-56 max-xl:h-[700px] max-xl:overflow-hidden w-full h-full">
-          <div className="flex flex-col max-xl:w-full items-center content-center justify-center align-center gap-10 ml-auto max-xl:mx-auto h-full max-xl:pt-[230%] max-w-[700px] pt-[1000px] pb-[100%] max-xl:pb-[200vh] p-5 max-xl:overflow-y-scroll">
-            <div className="flex h-24 w-full fixed bg-gradient-to-t from-transparent to-[#fffcf5] pointer-events-none top-0 max-xl:top-56"></div>
+          <div className="flex flex-col max-xl:w-full gap-10 ml-auto max-xl:mx-auto h-full max-w-[700px] pt-[300px] max-xl:pt-[100px] pb-[100%] p-5 max-xl:overflow-y-scroll overflow-x-hidden">
+            <div className="flex h-24 w-full fixed bg-gradient-to-t from-transparent to-[#fffcf5] pointer-events-none top-0 max-xl:top-56 z-20"></div>
               {
                 projects && projects.map((project) => (
                     <ProjectTile
@@ -53,7 +53,7 @@ export default function Index() {
               {
                 !projects && "Projects coming soon!"
               }
-              <div className="h-24 w-full fixed bottom-0 bg-gradient-to-t from-[#fffcf5] to-transparent  pointer-events-none"></div>
+              <div className="h-24 w-full fixed bottom-0 bg-gradient-to-t from-[#fffcf5] to-transparent  pointer-events-none z-20"></div>
             </div>
           </div>
         </div>

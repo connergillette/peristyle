@@ -25,9 +25,11 @@ export default function Update () {
         </div>
       </div>
       <div className="flex flex-col items-center justify-center container mx-auto h-min">
-        <div className="flex w-full items-center justify-center pt-10">
-          <img src={update.main_image_url} className="flex items-center align-center w-8/12 rounded-md" alt={update.title} />
-        </div>
+          <a href={update.main_image_url} target="_blank" rel="noreferrer">
+            <div className="flex w-full items-center justify-center pt-10">
+              <img src={update.main_image_url} className="flex items-center align-center w-8/12 rounded-2xl object-contain max-h-[100vh]" alt={update.title} />
+            </div>
+          </a>
         <div className="container mx-auto text-2xl flex flex-col items-center gap-8 leading-relaxedm p-10">
           <article className="w-10/12 prose-lg prose-invert" dangerouslySetInnerHTML={{__html: md.render(update.body)}}>
             
