@@ -32,6 +32,14 @@ export async function getAllProjects() {
   return await supabase.from('projects').select().order('id', { ascending: true })
 }
 
+export async function getProjectById(id: string) {
+  const response = await supabase.from('projects').select().eq('id', id)
+  if (!response.error) {
+    return response.data[0]
+  }
+  return null
+}
+
 export async function getUpdatesByProject(projectName: string) {
   const project = (await getProjectBySlug(projectName))
   if (project) {
@@ -88,3 +96,31 @@ export async function updateProjectById(formData: FormData) {
   }
   console.log(response.error)
 }
+
+export async function updateProjectUpdateById(formData: FormData) {
+  const providedServiceKey = formData.get('service_key')
+  if (providedServiceKey !== process.env.SUPABASE_SERVICE_KEY) {
+    return 'bad'
+  }
+
+  const supabase = createClient(process.env.SUPABASE_URL || '', formData.get('service_key') || '')
+
+  const response = await supabase.from('updates').update({
+    title: formData.get('title'),
+    slug: formData.get('slug'),
+    preview_line: formData.get('preview_line'),
+    body: formData.get('body'),
+    main_image_url: formData.get('main_image_url'),
+    project_id: formData.get('project_id'),
+  }).eq('id', formData.get('id'))
+
+  if (formData.get('project_id')) {
+    const projectSlug = (await getProjectById(formData.get('project_id') || ''))?.slug
+
+    if (!response.error) {
+      return { error: null, redirect: `/projects/${projectSlug}/${formData.get('slug')}` }
+    }
+  }
+  return { error: response.error }
+}
+
