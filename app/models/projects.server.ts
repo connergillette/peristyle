@@ -124,3 +124,29 @@ export async function updateProjectUpdateById(formData: FormData) {
   return { error: response.error }
 }
 
+export async function createProjectUpdate(formData: FormData) {
+  const providedServiceKey = formData.get('service_key')
+  if (providedServiceKey !== process.env.SUPABASE_SERVICE_KEY) {
+    return 'bad'
+  }
+
+  const supabase = createClient(process.env.SUPABASE_URL || '', formData.get('service_key') || '')
+
+  const response = await supabase.from('updates').insert({
+    title: formData.get('title'),
+    slug: formData.get('slug'),
+    preview_line: formData.get('preview_line'),
+    body: formData.get('body'),
+    main_image_url: formData.get('main_image_url'),
+    project_id: formData.get('project_id'),
+  }).eq('id', formData.get('id'))
+
+  if (formData.get('project_id')) {
+    const projectSlug = (await getProjectById(formData.get('project_id') || ''))?.slug
+
+    if (!response.error) {
+      return { error: null, redirect: `/projects/${projectSlug}/${formData.get('slug')}` }
+    }
+  }
+  return { error: response.error }
+}

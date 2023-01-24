@@ -14,15 +14,11 @@ export default function EditUpdate () {
     <div className={`w-full h-full text-white min-h-screen`} style={{backgroundColor: project?.theme_color}}>
       <div className="container mx-auto">
         <div className="pt-20 pb-10">
-          <h3 className="">EDITING</h3>
-          <h1 className="text-[70px] leading-[70px]">{update?.title}</h1>
+          <h3 className="">NEW UPDATE FOR</h3>
+          <h1 className="text-[70px] leading-[70px]">{project?.name}</h1>
         </div>
 
-        <form method="post" action={`/projects/updates/edit`} className="flex flex-col gap-5">
-          <label className="flex flex-col w-1/2">
-            <span>ID</span>
-            <input name="id" className="text-black p-2" defaultValue={update?.id} contentEditable={false}/>
-          </label>
+        <form method="post" action={`/projects/updates/new`} className="flex flex-col gap-5">
           <label className="flex flex-col w-1/2">
             <span>Title</span>
             <input name="title" className="text-black p-2" defaultValue={update?.title} />
