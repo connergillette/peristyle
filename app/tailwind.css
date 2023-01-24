@@ -872,6 +872,10 @@ li {
   margin: 2.5rem;
 }
 
+.m-\[50\%\] {
+  margin: 50%;
+}
+
 .my-1 {
   margin-top: 0.25rem;
   margin-bottom: 0.25rem;
@@ -928,6 +932,18 @@ li {
 
 .mt-12 {
   margin-top: 3rem;
+}
+
+.mt-\[50\%\] {
+  margin-top: 50%;
+}
+
+.mt-\[30\%\] {
+  margin-top: 30%;
+}
+
+.mt-\[10\%\] {
+  margin-top: 10%;
 }
 
 .inline-block {
@@ -1321,6 +1337,11 @@ li {
   background-color: rgb(239 68 68 / var(--tw-bg-opacity));
 }
 
+.bg-blue-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(59 130 246 / var(--tw-bg-opacity));
+}
+
 .bg-opacity-30 {
   --tw-bg-opacity: 0.3;
 }
@@ -1563,6 +1584,14 @@ li {
   font-size: 32px;
 }
 
+.text-\[42px\] {
+  font-size: 42px;
+}
+
+.text-\[72px\] {
+  font-size: 72px;
+}
+
 .font-bold {
   font-weight: 700;
 }
@@ -1632,6 +1661,10 @@ li {
 
 .opacity-40 {
   opacity: 0.4;
+}
+
+.opacity-50 {
+  opacity: 0.5;
 }
 
 .drop-shadow-xl {
@@ -1736,6 +1769,10 @@ li {
 
   .max-xl\:mt-\[-20px\] {
     margin-top: -20px;
+  }
+
+  .max-xl\:mt-\[20\%\] {
+    margin-top: 20%;
   }
 
   .max-xl\:h-12 {
@@ -1858,6 +1895,15 @@ li {
   .max-xl\:text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
+  }
+
+  .max-xl\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .max-xl\:text-\[32px\] {
+    font-size: 32px;
   }
 
   .max-xl\:font-bold {
