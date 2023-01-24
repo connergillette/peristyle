@@ -20,6 +20,9 @@ export const links: LinksFunction = () => [
 export const meta: MetaFunction = () => ({
   charset: "utf-8",
   title: "Peristyle",
+  author: "Conner Gillette",
+  description: "A site designed to showcase my personal projects that I plan to ship each month of 2023. A site by Conner Gillette.",
+  keywords: "conner, gillette, showcase, software, engineer, web, dev, 2023, seattle",
   viewport: "width=device-width,initial-scale=1",
 });
 

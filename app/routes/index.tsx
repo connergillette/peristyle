@@ -28,7 +28,7 @@ export default function Index() {
             <h2 className="text-center text-2xl">Project-A-Month</h2>
             <div className="flex w-full align-center justify-center">
               <Link to="/about" className="flex text-center mt-3 align-center justify-center w-auto max-w-[200px]">
-                <div className="flex text-center hover:text-white hover:drop-shadow-md max-w-[200px] hover:bg-teal-400 px-5 py-3 transition hover:scale-105 rounded-md align-center justify-center w-full">
+                <div className="flex text-center hover:text-white hover:drop-shadow-md hover:border-none hover:bg-teal-400 bg-opacity-30 hover:bg-opacity-100 px-5 py-3 transition hover:scale-105 rounded-md align-center justify-center w-full">
                   <h3 className="font-['bely'] text-2xl">Conner Gillette</h3>
                 </div>
               </Link>
@@ -37,7 +37,7 @@ export default function Index() {
         </div>
         <div className="relative max-xl:top-56 max-xl:overflow-x-hidden h-full max-xl:h-max w-[700px] self-end max-xl:min-w-0 max-xl:w-full">
           <div className="flex h-24 w-full fixed bg-gradient-to-t from-transparent to-[#fffcf5] pointer-events-none top-0 max-xl:top-56 z-20"></div>
-          <div className="flex flex-col max-xl:w-full gap-10 ml-auto max-xl:mx-auto h-max max-w-[700px] pt-[300px] max-xl:pt-[100px] pb-[40%] max-xl:pb-[100%] p-5 overflow-x-hidden overflow-y-hidden z-10">
+          <div className="flex flex-col max-xl:w-full gap-10 ml-auto max-xl:mx-auto h-max max-w-[700px] pt-[20vh] max-xl:pt-[100px] pb-[40%] max-xl:pb-[100%] p-5 overflow-x-hidden overflow-y-hidden z-10">
               {
                 projects && projects.map((project) => (
                     <ProjectTile
