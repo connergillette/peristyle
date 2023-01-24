@@ -3,17 +3,17 @@ import { json } from '@remix-run/node'
 import { useLoaderData } from '@remix-run/react'
 
 import logo from "~/assets/logo-bw.png"
-import { getUpdateBySlug } from '~/models/projects.server'
+import { getProjectBySlug, getUpdateBySlug } from '~/models/projects.server'
 
 const md = require('markdown-it')('commonmark')
 
 export const loader = async ({ params }: LoaderArgs) => {
   const {name, slug} = params
-  return json({ update: (await getUpdateBySlug(params.name, params.slug)), name, slug })
+  return json({ update: (await getUpdateBySlug(params.name, params.slug)), name, slug, project: (await getProjectBySlug(params.name || '')) })
 }
 
 export default function Update () {
-  const { name: projectName, update, slug } = useLoaderData<typeof loader>()
+  const { name: projectName, project, update, slug } = useLoaderData<typeof loader>()
 
   return (
     <div className="text-white bg-[#495993] h-full min-h-screen overflow-hidden">
