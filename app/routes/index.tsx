@@ -22,7 +22,7 @@ export default function Index() {
   return (
     <div className={`w-screen h-screen container mx-auto max-xl:overflow-y-hidden`}>
       <div className={`mx-auto h-screen flex flex-col`}>
-        <div className={`flex transition ${transitionProgress ? 'opacity-100' : 'opacity-0'} fixed duration-1000 ease-in-out mt-[30vh] max-xl:mt-[5vh] text-center font-['bely-display'] h-full max-xl:w-full z-10`}>
+        <div className={`flex transition ${transitionProgress ? 'opacity-100' : 'opacity-0'} fixed duration-1000 ease-in-out mt-[30vh] max-xl:mt-[5vh] text-center font-['bely-display'] h-full max-xl:w-full`}>
           <div className="max-xl:mx-auto max-xl:w-full ml-auto">
             <h1 className={`text-[200px] leading-[200px] max-xl:text-[75px] max-xl:leading-[75px] text-center`}>2023</h1>
             <h2 className="text-center text-2xl">Project-A-Month</h2>
@@ -34,7 +34,7 @@ export default function Index() {
           </div>
         </div>
         <div className="relative max-xl:top-56 max-xl:overflow-x-hidden w-full h-full max-xl:h-max">
-          <div className="flex flex-col max-xl:w-full gap-10 ml-auto max-xl:mx-auto h-max max-w-[700px] pt-[300px] max-xl:pt-[100px] pb-[40%] max-xl:pb-[100%] p-5 overflow-x-hidden overflow-y-hidden">
+          <div className="flex flex-col max-xl:w-full gap-10 ml-auto max-xl:mx-auto h-max max-w-[700px] pt-[300px] max-xl:pt-[100px] pb-[40%] max-xl:pb-[100%] p-5 overflow-x-hidden overflow-y-hidden z-10">
             <div className="flex h-24 w-full fixed bg-gradient-to-t from-transparent to-[#fffcf5] pointer-events-none top-0 max-xl:top-56 z-20"></div>
               {
                 projects && projects.map((project) => (
@@ -55,7 +55,7 @@ export default function Index() {
               {
                 !projects && "Projects coming soon!"
               }
-              <div className="h-24 w-full fixed bottom-0 bg-gradient-to-t from-[#fffcf5] to-transparent  pointer-events-none z-20"></div>
+              <div className="h-24 w-full fixed bottom-0 bg-gradient-to-t from-[#fffcf5] to-transparent pointer-events-none"></div>
             </div>
           </div>
         </div>
