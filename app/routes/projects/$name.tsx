@@ -46,7 +46,7 @@ export default function ProjectName () {
               <div className="flex flex-col font-['bely-display'] relative bg-white rounded-md max-xl:w-full w-4/12 min-h-[400px]">
                 <div className="p-5">
                   <h2 className="text-2xl mb-3">Updates</h2>
-                  <div className="flex flex-col grow gap-3 overflow-y-auto scroll-smooth w-full h-full rounded-md">
+                  <div className="flex flex-col grow gap-3 scroll-smooth w-full h-full rounded-md overflow-y-auto max-h-[600px] pb-[100px]">
                     {
                       updates.map((update: Update) => update && <UpdateOverview key={update.id} slug={`/projects/${name}/${update.slug}`} update={update} /> )
                     }
@@ -56,7 +56,7 @@ export default function ProjectName () {
                 {/* <div className="flex justify-center align-center">
                   <button className="button bg-[#495993] text-white w-min p-2 mt-2 rounded-md">More</button>
                 </div> */}
-                <div className="h-32 w-full absolute bottom-0 bg-gradient-to-t from-[#fffcf5] to-transparent select-none pointer-events-none rounded-md"></div>
+                <div className="h-32 w-full absolute bottom-0 bg-gradient-to-t from-white to-transparent select-none pointer-events-none rounded-md"></div>
               </div>
             </div>
             <div className="text-white w-8/12 max-xl:w-full">

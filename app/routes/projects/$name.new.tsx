@@ -21,32 +21,32 @@ export default function EditUpdate () {
         <form method="post" action={`/projects/updates/new`} className="flex flex-col gap-5">
           <label className="flex flex-col w-1/2">
             <span>Title</span>
-            <input name="title" className="text-black p-2" defaultValue={update?.title} />
+            <input name="title" className="text-black p-2 rounded-md" defaultValue={update?.title} />
           </label>
           <label className="flex flex-col w-1/2">
             <span>Preview line</span>
-            <input name="preview_line" className="text-black p-2" defaultValue={update?.preview_line} />
+            <input name="preview_line" className="text-black p-2 rounded-md" defaultValue={update?.preview_line} />
           </label>
           <label className="flex flex-col w-1/2">
             <span>Slug</span>
-            <input name="slug" className="text-black p-2"  defaultValue={update?.slug} />
+            <input name="slug" className="text-black p-2 rounded-md"  defaultValue={update?.slug} />
           </label>          
           <label className="flex flex-col">
             <span>Body (Markdown)</span>
-            <textarea name="body" className="text-black p-2 h-56" defaultValue={update?.body} />
+            <textarea name="body" className="text-black p-2 h-56 rounded-md" defaultValue={update?.body} />
           </label>
           <label className="flex flex-col">
             <span>Main image URL</span>
-            <input name="main_image_url" className="text-black p-2" defaultValue={update?.main_image_url}  />
+            <input name="main_image_url" className="text-black p-2 rounded-md" defaultValue={update?.main_image_url}  />
           </label>
           <label className="flex flex-col">
             <span>Project ID</span>
-            <input name="project_id" className="text-black p-2" defaultValue={update?.project_id}  />
+            <input name="project_id" className="text-black p-2 rounded-md" defaultValue={update?.project_id}  />
           </label>
 
           <label className="flex flex-col">
             <span>Service key</span>
-            <input name="service_key" className="text-black p-2 bg-yellow-500" />
+            <input name="service_key" className="text-black p-2 bg-yellow-500 rounded-md" />
           </label>
 
           <button className="rounded-md bg-white bg-opacity-30 px-5 py-3 mb-10 w-max">Save</button>
