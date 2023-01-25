@@ -28,9 +28,9 @@ export default function About() {
             </a>
           </div>
         </div>
-        <div className="flex flex-col ml-auto max-xl:mt-5">
+        <div className="flex flex-col ml-auto max-xl:mt-5 mb-10">
           <div className="inline-block mb-10 max-xl:mb-2">
-            <h1 className="text-[7vw] leading-[7vw] font-['bely-display'] whitespace-nowrap max-xl:text-center max-xl:text-[48px] max-xl:leading-[48px] text-[#fffcf5] drop-shadow-lg">
+            <h1 className={`transition duration-1000 text-[7vw] leading-[7vw] font-['bely-display'] whitespace-nowrap text-right max-xl:text-center max-xl:text-[48px] max-xl:leading-[48px] text-[#fffcf5] drop-shadow-lg ${transitionProgress ? 'opacity-1' : 'opacity-0'}`}>
               Conner Gillette
             </h1>
             <h2 className="text-[32px] text-right max-xl:text-center">Full-Stack Dev</h2>
