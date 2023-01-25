@@ -1,51 +1,26 @@
-# Welcome to Remix!
+# Peristyle - My 2023 Showcase Site
+## Project-A-Month for January
 
-- [Remix Docs](https://remix.run/docs)
+This is my first of 12 projects in 2023, and serves as a showcase site for the future 11 and a much-needed personal portfolio site. In addition to being a nice place to show off projects and serve as a mini-blog, I wanted to highlight more of the process of each project with the inclusion of progress bars and project status. A stretch goal for this project is to also include basic CMS-like features, which includes authentication, page creation / editing, etc. Supabase will make some of things easier, but this will be more involved than the simple static site.
 
-## Development
+### Built With:
+- [Remix](remix.run)
+- [TailwindCSS](https://tailwindcss.com)
+- [Supabase](https://supabase.com)
 
-Start the Remix development asset server and the Express server by running:
+### Running Locally
+If you'd like to use this project for your own purposes, here's how to get started with the basics:
 
-```sh
-npm run dev
-```
-
-This starts your app in development mode, which will purge the server require cache when Remix rebuilds assets so you don't need a process manager restarting the express server.
-
-## Deployment
-
-First, build your app for production:
-
-```sh
-npm run build
-```
-
-Then run the app in production mode:
-
-```sh
-npm start
-```
-
-Now you'll need to pick a host to deploy it to.
-
-### DIY
-
-If you're familiar with deploying express applications you should be right at home just make sure to deploy the output of `remix build`
-
-- `build/`
-- `public/build/`
-
-### Using a Template
-
-When you ran `npx create-remix@latest` there were a few choices for hosting. You can run that again to create a new project, then copy over your `app/` folder to the new project that's pre-configured for your target server.
-
-```sh
-cd ..
-# create a new project, and pick a pre-configured host
-npx create-remix@latest
-cd my-new-remix-app
-# remove the new project's app (not the old one!)
-rm -rf app
-# copy your app over
-cp -R ../my-old-remix-app/app app
-```
+- Clone the repo onto your local machine.
+- Set up a [Supabase](https://supabase.com/) project (for free!) to serve as the site's backend.
+- Create tables for `projects` and `updates` with columns that match the corresponding types in `app/models/projects.server.ts`.
+- Create a single `project` (can be a placeholder). This is useful later to verify that you can pull data from Supabase correctly.
+- Create a file called `.env` in the root directory and configure it with the following template:
+  ```
+    SUPABASE_URL=supabase-url-here
+    SUPABASE_PUBLIC_KEY=supabase-public-key-here
+    SUPABASE_SERVICE_KEY=supabase-service-key-here
+  ```
+- Run `npm install` to install dependencies.
+- Run `npm run dev` to start.
+- Navigate to `localhost:3000` (by default) to view your project.
