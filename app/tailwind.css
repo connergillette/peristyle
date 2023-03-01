@@ -929,6 +929,10 @@ li {
   display: flex;
 }
 
+.hidden {
+  display: none;
+}
+
 .h-16 {
   height: 4rem;
 }
@@ -1520,6 +1524,10 @@ li {
 .text-stone-300 {
   --tw-text-opacity: 1;
   color: rgb(214 211 209 / var(--tw-text-opacity));
+}
+
+.text-\[\'bely\'\] {
+  color: 'bely';
 }
 
 .opacity-0 {
