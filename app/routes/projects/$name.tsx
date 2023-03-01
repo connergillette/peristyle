@@ -39,7 +39,7 @@ export default function ProjectName () {
         }
         {
           project.details && (
-            <div className="flex h-full overflow-hidden text-[#333333] mb-5 gap-5">
+            <div className="flex h-full text-[#333333] mb-5 gap-5">
               <div className="flex flex-col w-full rounded-md">
                 <div className="flex flex-row max-xl:flex-col gap-5 justify-center">
                   {
@@ -55,7 +55,13 @@ export default function ProjectName () {
                   <div className="flex flex-col font-['bely-display'] relative bg-white rounded-md max-xl:w-full w-4/12 min-h-[400px]">
                     <div className="p-5">
                       <h2 className="text-2xl mb-3">Updates</h2>
-                      <div className="flex flex-col grow gap-3 scroll-smooth w-full h-full rounded-md overflow-y-auto max-h-[600px] pb-[100px]">
+                      <div className="flex flex-col grow gap-3 scroll-smooth w-full h-full overflow-y-auto rounded-md max-h-[400px] pb-[100px]">
+                        {
+                          updates.map((update: Update) => update && <UpdateOverview key={update.id} slug={`/projects/${name}/${update.slug}`} update={update} /> )
+                        }
+                        {
+                          updates.map((update: Update) => update && <UpdateOverview key={update.id} slug={`/projects/${name}/${update.slug}`} update={update} /> )
+                        }
                         {
                           updates.map((update: Update) => update && <UpdateOverview key={update.id} slug={`/projects/${name}/${update.slug}`} update={update} /> )
                         }

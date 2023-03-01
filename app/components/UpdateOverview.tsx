@@ -3,7 +3,7 @@ import type { Update } from "~/models/projects.server";
 
 export default function UpdateOverview ({ update, slug }: { update: Update, slug: string }) {
   return (
-    <Link to={slug}>
+    <Link to={slug} data-gktag="gk-01-02" className="overflow-visible">
       <div className="flex flex-row rounded-md">
         <div className="pr-3 pt-1">
           <div className="h-16 w-16">

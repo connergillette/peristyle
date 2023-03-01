@@ -29,7 +29,7 @@ export default function Index() {
             <div className="flex w-full align-center justify-center">
               <Link to="/about" className="flex text-center mt-3 align-center justify-center w-auto max-w-[200px]">
                 <div className="flex text-center hover:text-white hover:drop-shadow-md hover:border-none hover:bg-teal-400 bg-opacity-30 hover:bg-opacity-100 px-5 py-3 transition hover:scale-105 rounded-md align-center justify-center w-full">
-                  <h3 className="font-['bely'] text-2xl">Conner Gillette</h3>
+                  <h3 className="font-['bely'] text-2xl" data-gktag="gk-02-01">Conner Gillette</h3>
                 </div>
               </Link>
             </div>
