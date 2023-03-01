@@ -46,6 +46,7 @@ export default function Index() {
                       bg={`bg-[${project.theme_color}]`}
                       text={`text-[${project.theme_color}]`}
                       projectName={project.name?.toUpperCase() || '???'}
+                      slug={project.slug}
                       description={project.description ? project.description.split('.')[0] : "Coming soon"}
                       progress={project.progress}
                       next={project.is_next}

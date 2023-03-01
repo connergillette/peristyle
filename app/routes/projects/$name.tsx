@@ -20,14 +20,16 @@ export default function ProjectName () {
     <div className={`text-white transition duration-500 h-full`} style={{backgroundColor: project.theme_color}}>
       <div className="flex flex-col container w-10/12 mx-auto pb-10 pt-16 h-full min-h-screen">
         <div className="flex max-xl:flex-col h-min mb-5">
-          <div className="w-min">
+          <div className="">
             <h1 className="font-['bely-display'] text-[100px] max-xl:text-[50px] z-10 drop-shadow-xl">{project.name}</h1>
             <div className="mt-[-35px] max-xl:mt-[-20px]">
               <ProgressBar progress={project?.progress} />
             </div>
           </div>
           <div className="flex grow items-center h-30 m-10 max-xl:m-0 text-stone-300 text-3xl max-xl:text-xl">
-            {project?.description || "Coming soon"}
+
+              {project?.description || "Coming soon"}
+            {/* </div> */}
           </div>
         </div>
         {

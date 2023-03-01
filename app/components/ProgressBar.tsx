@@ -12,7 +12,7 @@ export default function ProgressBar ({ progress }: { progress: number }) {
 
   return (
     <>
-      {progress < 100 && (
+      {progress > 0 && (
         <div className={`flex flex-row ${progress === 0 ? 'opacity-0' : ''}`}>
           <div className="flex h-[12px] bg-white opacity-70 rounded-lg m-3 w-full pl-0.5 pr-0.5 max-xl:h-[8px]">
             <div 
@@ -20,10 +20,9 @@ export default function ProgressBar ({ progress }: { progress: number }) {
               style={{width: `${transitionProgress}%`, transition: 'width', transitionDuration: `${ progress * 10 }ms`}}
             ></div>
           </div>
-          <div className="flex grow my-1 mr-3 justify-end">{progress}%</div>
+          <div className="flex grow my-1 mr-3 justify-end">{progress === 100 ? 'Complete!' : `${progress}%`}</div>
         </div>
       )}
-      {progress === 100 && <div className="my-1 text-green-400 text-center font-bold w-full">Complete!</div>}
     </>
   )
 }

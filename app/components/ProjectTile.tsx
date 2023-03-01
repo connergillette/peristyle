@@ -2,15 +2,15 @@ import { Link } from "@remix-run/react";
 import ProgressBar from "./ProgressBar";
 
 export default function ProjectTile(
-  { month, projectName, progress, bg, text, description, next, theme_color }:
-  { month: string, projectName?: string, progress?: number, bg?: string, text?: string, description?: string, next?: boolean, theme_color: string }
+  { month, projectName, slug, progress, bg, text, description, next, theme_color }:
+  { month: string, projectName?: string, slug?: string, progress?: number, bg?: string, text?: string, description?: string, next?: boolean, theme_color: string }
 ) {
 
   const style = progress ? { backgroundColor: theme_color, color: 'white' } : { color: theme_color }
 
   return (
     <Link 
-      to={`/projects/${projectName?.toLowerCase()}`} 
+      to={`/projects/${slug}`} 
       className={`flex flex-row gap-10 max-xl:gap-1 shrink-0 rounded-2xl ${next ? ' border-dashed border-gray-400 border-4' : ((!progress || progress === 0) && 'border-gray-100 border-2')} items-center p-5 scale-100 hover:scale-105 transition w-full z-10`}
       style={style}
       data-gktag="gk-01-01"
