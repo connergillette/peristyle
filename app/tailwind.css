@@ -859,6 +859,14 @@ li {
   margin: 2.5rem;
 }
 
+.m-5 {
+  margin: 1.25rem;
+}
+
+.m-2 {
+  margin: 0.5rem;
+}
+
 .my-1 {
   margin-top: 0.25rem;
   margin-bottom: 0.25rem;
@@ -929,10 +937,6 @@ li {
   display: flex;
 }
 
-.hidden {
-  display: none;
-}
-
 .h-16 {
   height: 4rem;
 }
@@ -991,10 +995,6 @@ li {
   max-height: 400px;
 }
 
-.max-h-\[600px\] {
-  max-height: 600px;
-}
-
 .min-h-screen {
   min-height: 100vh;
 }
@@ -1048,13 +1048,13 @@ li {
   width: 83.333333%;
 }
 
+.w-4\/12 {
+  width: 33.333333%;
+}
+
 .w-min {
   width: -moz-min-content;
   width: min-content;
-}
-
-.w-4\/12 {
-  width: 33.333333%;
 }
 
 .max-w-\[200px\] {
@@ -1256,6 +1256,11 @@ li {
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
+.bg-slate-300 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(203 213 225 / var(--tw-bg-opacity));
+}
+
 .bg-opacity-30 {
   --tw-bg-opacity: 0.3;
 }
@@ -1326,6 +1331,10 @@ li {
 
 .p-10 {
   padding: 2.5rem;
+}
+
+.p-1 {
+  padding: 0.25rem;
 }
 
 .px-5 {
@@ -1471,10 +1480,6 @@ li {
   font-size: 72px;
 }
 
-.font-bold {
-  font-weight: 700;
-}
-
 .leading-\[200px\] {
   line-height: 200px;
 }
@@ -1489,11 +1494,6 @@ li {
 
 .leading-snug {
   line-height: 1.375;
-}
-
-.text-green-400 {
-  --tw-text-opacity: 1;
-  color: rgb(74 222 128 / var(--tw-text-opacity));
 }
 
 .text-white {
@@ -1526,10 +1526,6 @@ li {
   color: rgb(214 211 209 / var(--tw-text-opacity));
 }
 
-.text-\[\'bely\'\] {
-  color: 'bely';
-}
-
 .opacity-0 {
   opacity: 0;
 }
@@ -1548,6 +1544,38 @@ li {
 
 .opacity-40 {
   opacity: 0.4;
+}
+
+.outline-dotted {
+  outline-style: dotted;
+}
+
+.outline-2 {
+  outline-width: 2px;
+}
+
+.outline-offset-2 {
+  outline-offset: 2px;
+}
+
+.outline-offset-8 {
+  outline-offset: 8px;
+}
+
+.outline-offset-4 {
+  outline-offset: 4px;
+}
+
+.outline-offset-\[-1px\] {
+  outline-offset: -1px;
+}
+
+.outline-offset-\[-2px\] {
+  outline-offset: -2px;
+}
+
+.outline-lime-500 {
+  outline-color: #84cc16;
 }
 
 .drop-shadow-xl {
@@ -1621,6 +1649,120 @@ li {
 }
 
 @media not all and (min-width: 1280px) {
+  .max-xl\:container {
+    width: 100%;
+  }
+
+  @media (min-width: 640px) {
+    .max-xl\:container {
+      max-width: 640px;
+    }
+  }
+
+  .max-xl\:container {
+    width: 100%;
+  }
+
+  @media (min-width: 640px) {
+    .max-xl\:container {
+      max-width: 640px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .max-xl\:container {
+      max-width: 768px;
+    }
+  }
+
+  .max-xl\:container {
+    width: 100%;
+  }
+
+  @media (min-width: 640px) {
+    .max-xl\:container {
+      max-width: 640px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .max-xl\:container {
+      max-width: 768px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .max-xl\:container {
+      max-width: 1024px;
+    }
+  }
+
+  .max-xl\:container {
+    width: 100%;
+  }
+
+  @media (min-width: 640px) {
+    .max-xl\:container {
+      max-width: 640px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .max-xl\:container {
+      max-width: 768px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .max-xl\:container {
+      max-width: 1024px;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .max-xl\:container {
+      max-width: 1280px;
+    }
+  }
+
+  .max-xl\:container {
+    width: 100%;
+  }
+
+  @media (min-width: 640px) {
+    .max-xl\:container {
+      max-width: 640px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .max-xl\:container {
+      max-width: 768px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .max-xl\:container {
+      max-width: 1024px;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .max-xl\:container {
+      max-width: 1280px;
+    }
+  }
+
+  @media (min-width: 1536px) {
+    .max-xl\:container {
+      max-width: 1536px;
+    }
+  }
+
+  .max-xl\:fixed {
+    position: fixed;
+  }
+
   .max-xl\:top-56 {
     top: 14rem;
   }
@@ -1699,12 +1841,21 @@ li {
     width: 12rem;
   }
 
+  .max-xl\:w-max {
+    width: -moz-max-content;
+    width: max-content;
+  }
+
   .max-xl\:min-w-0 {
     min-width: 0px;
   }
 
   .max-xl\:flex-col {
     flex-direction: column;
+  }
+
+  .max-xl\:content-center {
+    align-content: center;
   }
 
   .max-xl\:items-center {
@@ -1741,6 +1892,10 @@ li {
 
   .max-xl\:pb-\[100\%\] {
     padding-bottom: 100%;
+  }
+
+  .max-xl\:pb-\[50\%\] {
+    padding-bottom: 50%;
   }
 
   .max-xl\:text-left {
