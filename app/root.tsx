@@ -1,5 +1,5 @@
-import { cssBundleHref } from "@remix-run/css-bundle";
-import type { LinksFunction } from "@remix-run/node";
+import { cssBundleHref } from "@remix-run/css-bundle"
+import type { LinksFunction } from "@remix-run/node"
 import {
   Links,
   LiveReload,
@@ -7,12 +7,16 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
-} from "@remix-run/react";
+} from "@remix-run/react"
 
-import styles from "./tailwind.css";
+import styles from "./tailwind.css"
+import MainHeader from './components/MainHeader'
 
 export const links: LinksFunction = () => [
-  { rel: "stylesheet", href: styles },
+  { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
+  { rel: 'preconnect', href: 'https://fonts.gstatic.com' },
+  { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap'},
+  { rel: 'stylesheet', href: styles },
   ...(cssBundleHref ? [{ rel: "stylesheet", href: cssBundleHref }] : []),
 ];
 
@@ -26,11 +30,14 @@ export default function App() {
         <Links />
       </head>
       <body>
-        <Outlet />
+        <div className="flex flex-col m-5 gap-5 font-['Cabin']">
+          <MainHeader text="Conner Gillette" />
+          <Outlet />
+        </div>
         <ScrollRestoration />
         <Scripts />
         <LiveReload />
       </body>
     </html>
-  );
+  )
 }
