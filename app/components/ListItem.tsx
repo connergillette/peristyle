@@ -11,8 +11,8 @@ interface Props {
 export default function ListItem ({ children, color }: Props) {
 
   return (
-    <div className={`flex flex-col w-full bg-gray-200 rounded-lg border-solid border-2 p-2 ${color ? `${color.border} ${color.bg}` : `${themeColors.GRAY.border} ${themeColors.GRAY.bg}`}`}>
-      <div className="flex">
+    <div className={`flex flex-col gap-4 w-full rounded-lg p-2 ${color ? `${color.border} ${color.bg} border-solid border-2` : ``}`}>
+      <div className="flex border-b-2 border-b-solid border-b-gray-200 pb-2">
         <Pill text={'06/01/2023'} />
         <div className="uppercase py-1 px-2 font-bold grow">Title of item</div>
         <div className="mr-1 opacity-50">
