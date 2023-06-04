@@ -1,6 +1,8 @@
 import type { V2_MetaFunction } from "@remix-run/node";
 import { themeColors } from '~/colors'
+import ImageGrid from '~/components/ImageGrid'
 import ListItem from '~/components/ListItem'
+import SectionHeader from '~/components/SectionHeader'
 
 export const meta: V2_MetaFunction = () => {
   return [
@@ -11,17 +13,46 @@ export const meta: V2_MetaFunction = () => {
 
 export default function Index() {
   return (
-    <div className="flex flex-col gap-4 max-w-[800px] mx-auto">
-      <ListItem></ListItem>
-      <ListItem>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      </ListItem>
-      <ListItem>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      </ListItem>
-      <ListItem>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      </ListItem>
+    <div className="flex flex-col gap-10 max-w-[800px] mb-10">
+      <div className="grid grid-flow-row grid-cols-2 max-xl:grid-cols-1 gap-10">
+        <div className="flex flex-col gap-4 mx-auto px-5">
+          <SectionHeader title="Professional" />
+          <ListItem>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </ListItem>
+          <ListItem>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </ListItem>
+          <ListItem>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </ListItem>
+        </div>
+        <div className="flex flex-col gap-4 mx-auto px-5">
+          <SectionHeader title="Side Projects" />
+          <ListItem>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </ListItem>
+          <ListItem>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </ListItem>
+          <ListItem>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </ListItem>
+        </div>
+        <div className="flex flex-col gap-4 mx-auto px-5">
+          <SectionHeader title="Hobbies" />
+          <ListItem>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </ListItem>
+          <ListItem>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </ListItem>
+          <ListItem>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </ListItem>
+        </div>
+        <ImageGrid />
+      </div>
     </div>
   )
 }
