@@ -9,8 +9,8 @@ interface Props {
 
 export default function ImageBlock ({ src, alt, color }: Props) {
   return (
-    <div className={`grow rounded-lg bg-white aspect-square w-24 h-24 border-solid border-2 overflow-hidden ${color ? color.border : themeColors.GRAY.border}`}>
-      <img src={src} alt={alt} className="w-full h-full aspect-square object-cover" />
+    <div className={`grow rounded-lg bg-white aspect-square border-solid border-2 object-cover overflow-hidden ${color ? color.border : themeColors.GRAY.border}`}>
+      <img src={src} alt={alt} className="w-full h-full aspect-square object-cover hover:scale-105 transition" />
     </div>
   )
 }

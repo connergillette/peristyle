@@ -13,30 +13,42 @@ export const meta: V2_MetaFunction = () => {
 
 export default function Index() {
   return (
-    <div className="flex flex-col gap-10 max-w-[800px] mb-10">
+    <div className="flex flex-col gap-10 mb-10">
       <div className="grid grid-flow-row grid-cols-2 max-xl:grid-cols-1 gap-10">
         <div className="flex flex-col gap-4 mx-auto px-5">
           <SectionHeader title="Professional" />
-          <ListItem>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          <ListItem title="Koji">
+            <div className="grow">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </div>
           </ListItem>
-          <ListItem>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          <ListItem title="Abound">
+            <div className="grow">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </div>
           </ListItem>
-          <ListItem>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          <ListItem title="G2 Web Services">
+            <div className="grow">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </div>
           </ListItem>
         </div>
         <div className="flex flex-col gap-4 mx-auto px-5">
           <SectionHeader title="Side Projects" />
-          <ListItem>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          <ListItem title="Peristyle">
+            <div className="grow">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </div>
           </ListItem>
-          <ListItem>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          <ListItem title="Eight">
+          <div className="grow">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </div>
           </ListItem>
-          <ListItem>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          <ListItem title="Lootsheet">
+          <div className="grow">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </div>
           </ListItem>
         </div>
         <div className="flex flex-col gap-4 mx-auto px-5">
