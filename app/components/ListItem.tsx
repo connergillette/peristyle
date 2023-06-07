@@ -20,7 +20,7 @@ export default function ListItem ({ children, color, title }: Props) {
           <Pill text={'06/01/2023'} />
         </div>
         <div className="flex gap-4">
-          <div className="flex flex-col w-3/4 gap-4">
+          <div className="flex flex-col w-3/4 gap-4 grow">
             {children}
           </div>
           <div className="w-24 h-24">
