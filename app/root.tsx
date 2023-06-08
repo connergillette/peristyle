@@ -30,7 +30,7 @@ export default function App() {
         <Links />
       </head>
       <body>
-        <div className="flex flex-col gap-5 font-['Cabin'] mx-auto max-w-[800px]">
+        <div className="flex flex-col gap-5 font-['Cabin'] mx-auto max-w-[1000px]">
           <MainHeader text="Conner Gillette" />
           <Outlet />
         </div>
