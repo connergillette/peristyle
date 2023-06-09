@@ -13,8 +13,8 @@ export default function MainHeader (props: Props) {
         </a>
         <h2 className="text-xl italic opacity-40 max-xl:text-base">Full-stack software engineer based in Redmond, WA, USA.</h2>
       </div>
-      <a href="https://linkedin.com/in/connergillette" className="h-min"><Pill text="LinkedIn" /></a>
-      <a href="https://github.com/connergillette" className="h-min"><Pill text="GitHub" /></a>
+      <a href="https://linkedin.com/in/connergillette" className="h-min hover:scale-105 transition"><Pill text="LinkedIn" /></a>
+      <a href="https://github.com/connergillette" className="h-min hover:scale-105 transition"><Pill text="GitHub" /></a>
     </div>
   )
 }

@@ -23,7 +23,7 @@ export default function Detail() {
 
   return (
     <div className="flex flex-col px-5">
-      <div className="rounded-md max-h-100 mb-10 overflow-hidden flex justify-center">
+      <div className="rounded-md w-3/4 mx-auto mb-10 overflow-hidden flex justify-center">
         <img src={event.image_url} className="object-contain" />
       </div>
       <SectionHeader title={event.name} date={event.date_content} />
