@@ -24,6 +24,7 @@ export async function loader () {
   const eventsResponse = await supabase.from('events').select()
   let events : any = {}
   if (eventsResponse.error) {
+    console.log(eventsResponse.error)
     return { error: eventsResponse.error }
   } else {
     for (const event of eventsResponse.data) {
@@ -38,6 +39,7 @@ export async function loader () {
   const imagesResponse = await supabase.from('images').select()
   let images : any = {}
   if (imagesResponse.error) {
+    console.log(imagesResponse.error)
     return { error: imagesResponse.error }
   } else {
     images = imagesResponse.data
@@ -53,11 +55,19 @@ export default function Index() {
     <div className="flex flex-col gap-10 mb-10">
       <div className="grid grid-flow-row grid-cols-2 max-md:grid-cols-1 gap-10">
         {
-          Object.keys(events).map((activity) => (
+          events && Object.keys(events).map((activity) => (
             <ActivitySection activity={activity} events={events[activity]} key={activity} />
           ))
         }
-        <ImageGrid images={images} />
+        {
+          !events && <span className="text-center font-bold text-red-400">Something went wrong loading these items. Sorry!</span>
+        }
+        {
+          images && <ImageGrid images={images} />
+        }
+        {
+          !images && <span className="text-center font-bold text-red-400">Something went wrong loading these images. Sorry!</span>
+        }
       </div>
     </div>
   )
