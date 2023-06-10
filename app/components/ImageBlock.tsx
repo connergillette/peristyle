@@ -19,7 +19,7 @@ export default function ImageBlock ({ src, alt, color, caption, borderOnHover }:
       className={`
         self-right rounded-lg aspect-square border-solid object-cover overflow-hidden \
         ${ src ? '' : 'bg-blue-100'} ${color ? color.border : themeColors.GRAY.border} \
-        ${borderOnHover ? ' border-4 border-solid border-gray-100 border-opacity-0 hover:border-opacity-100' : ''}
+        ${borderOnHover ? ' border-4 border-solid border-gray-100 border-opacity-0 hover:border-opacity-100 transition' : ''}
       `}
       onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}
     >
