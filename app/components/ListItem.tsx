@@ -33,7 +33,7 @@ export default function ListItem ({ event, children, color, pills, dateContent, 
           <div className={`flex flex-col gap-2 min-h-[170px] w-full max-w-full rounded-lg p-2 ${color ? `${color.border} ${color.bg} border-solid border-2` : ``}`}>
             <div className="flex">
               <div className="uppercase py-1 font-bold grow">{event.name}</div>
-              <Pill text={event.date_content} />
+              <Pill text={event.date_content} contrast={isFirst} />
             </div>
             <div className="flex gap-4">
               <div className="flex flex-col w-3/4 gap-4 grow opacity-60">
@@ -61,11 +61,11 @@ export default function ListItem ({ event, children, color, pills, dateContent, 
       }
       {
         compact && (
-          <div className={`flex gap-2 w-full rounded-lg p-2 ${!isFirst ? 'px-5' : ''} ${color ? `${color.border} ${color.bg} border-solid border-2` : ``}`}>
+          <div className={`flex gap-2 rounded-lg p-2 border-2 transition border-solid hover:border-opacity-100 border-opacity-0 ${!isFirst ? 'mx-2' : ''} ${color ? `${color.border} ${color.bg}` : `border-gray-100`}`}>
             <div className="flex flex-col w-full">
               <div className="uppercase py-1 font-bold grow">{event.name}</div>
               <div className="flex gap-2">
-                <Pill text={event.date_content} />
+                <Pill text={event.date_content} contrast={isFirst} />
               </div>
             </div>
             <div className="flex gap-4 grow">

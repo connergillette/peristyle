@@ -24,7 +24,7 @@ export async function loader () {
   const eventsResponse = await supabase.from('events').select()
   let events : any = {}
   if (eventsResponse.error) {
-    console.log(eventsResponse.error)
+    console.error(eventsResponse.error)
     return { error: eventsResponse.error }
   } else {
     for (const event of eventsResponse.data) {
@@ -39,7 +39,7 @@ export async function loader () {
   const imagesResponse = await supabase.from('images').select()
   let images : any = {}
   if (imagesResponse.error) {
-    console.log(imagesResponse.error)
+    console.error(imagesResponse.error)
     return { error: imagesResponse.error }
   } else {
     images = imagesResponse.data
