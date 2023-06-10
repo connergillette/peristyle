@@ -61,9 +61,9 @@ export default function ListItem ({ event, children, color, pills, dateContent, 
       }
       {
         compact && (
-          <div className={`flex gap-2 rounded-lg p-2 border-2 transition border-solid hover:border-opacity-100 border-opacity-0 ${!isFirst ? 'mx-2' : ''} ${color ? `${color.border} ${color.bg}` : `border-gray-100`}`}>
+          <div className={`flex gap-2 rounded-lg p-2 border-2 transition border-solid hover:border-opacity-100 border-opacity-0 ${color ? `${color.border} ${color.bg}` : `border-gray-100`}`}>
             <div className="flex flex-col w-full">
-              <div className="uppercase py-1 font-bold grow">{event.name}</div>
+              <div className="uppercase font-bold grow">{event.name}</div>
               <div className="flex gap-2">
                 <Pill text={event.date_content} contrast={isFirst} />
               </div>
