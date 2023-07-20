@@ -27,7 +27,8 @@ interface Props {
 
 export default function ListItem ({ event, children, color, pills, dateContent, compact, isFirst }: Props) {
   return (
-    <a href={`/${event.id}`}>
+    // <a href={`/${event.id}`}>
+    <>
       {
         !compact && (
           <div className={`flex flex-col gap-2 min-h-[170px] w-full max-w-full rounded-lg p-2 ${color ? `${color.border} ${color.bg} border-solid border-2` : ``}`}>
@@ -81,6 +82,7 @@ export default function ListItem ({ event, children, color, pills, dateContent, 
         )
       }
       
-    </a>
+    {/* </a> */}
+    </>
   )
 }
