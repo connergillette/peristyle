@@ -1,7 +1,7 @@
 export const themeColors = {
   GRAY: {
-    bg: 'bg-gray-100',
-    border: 'border-gray-200'
+    bg: 'bg-gray-400',
+    border: 'border-gray-500'
   },
   YELLOW: {
     bg: 'bg-yellow-200',

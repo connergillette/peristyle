@@ -29,7 +29,7 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body>
+      <body className="bg-gray-800 text-gray-100">
         <div className="flex flex-col gap-5 font-['Cabin'] mx-auto max-w-[1000px]">
           <MainHeader text="Conner Gillette" />
           <Outlet />

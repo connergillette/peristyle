@@ -62,7 +62,7 @@ export default function ListItem ({ event, children, color, pills, dateContent, 
       }
       {
         compact && (
-          <div className={`flex gap-2 rounded-lg p-2 border-2 transition border-solid hover:border-opacity-100 border-opacity-0 ${color ? `${color.border} ${color.bg}` : `border-gray-100`}`}>
+          <div className={`flex gap-2 rounded-lg p-2 border-2 transition border-solid hover:border-opacity-100 border-opacity-0 ${color ? `${color.border} ${color.bg}` : `border-gray-500`}`}>
             <div className="flex flex-col w-full">
               <div className="uppercase font-bold grow">{event.name}</div>
               <div className="flex gap-2">
