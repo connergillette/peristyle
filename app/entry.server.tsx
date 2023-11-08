@@ -1,22 +1,25 @@
-import { PassThrough } from "stream";
-import type { EntryContext } from "@remix-run/node";
+/**
+ * By default, Remix will handle generating the HTTP Response for you.
+ * You are free to delete this file if you'd like to, but if you ever want it revealed again, you can run `npx remix reveal` ✨
+ * For more information, see https://remix.run/file-conventions/entry.server
+ */
+
+import { PassThrough } from "node:stream";
+
+import type { AppLoadContext, EntryContext } from "@remix-run/node";
 import { Response } from "@remix-run/node";
 import { RemixServer } from "@remix-run/react";
 import isbot from "isbot";
 import { renderToPipeableStream } from "react-dom/server";
-import { createClient } from "@supabase/supabase-js";
 
-const ABORT_DELAY = 5000;
-export const supabase = createClient(
-  'https://tbapjtyegqkzbhfwpjls.supabase.co',
-  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRiYXBqdHllZ3FremJoZndwamxzIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NzMyMzUyMzYsImV4cCI6MTk4ODgxMTIzNn0.DoH-dac5JsY56NS5YrykWX83g0yOhkbZM9VfGl3vyyQ'
-)
+const ABORT_DELAY = 5_000;
 
 export default function handleRequest(
   request: Request,
   responseStatusCode: number,
   responseHeaders: Headers,
-  remixContext: EntryContext
+  remixContext: EntryContext,
+  loadContext: AppLoadContext
 ) {
   return isbot(request.headers.get("user-agent"))
     ? handleBotRequest(
@@ -40,10 +43,12 @@ function handleBotRequest(
   remixContext: EntryContext
 ) {
   return new Promise((resolve, reject) => {
-    let didError = false;
-
     const { pipe, abort } = renderToPipeableStream(
-      <RemixServer context={remixContext} url={request.url} />,
+      <RemixServer
+        context={remixContext}
+        url={request.url}
+        abortDelay={ABORT_DELAY}
+      />,
       {
         onAllReady() {
           const body = new PassThrough();
@@ -53,7 +58,7 @@ function handleBotRequest(
           resolve(
             new Response(body, {
               headers: responseHeaders,
-              status: didError ? 500 : responseStatusCode,
+              status: responseStatusCode,
             })
           );
 
@@ -63,8 +68,7 @@ function handleBotRequest(
           reject(error);
         },
         onError(error: unknown) {
-          didError = true;
-
+          responseStatusCode = 500;
           console.error(error);
         },
       }
@@ -81,10 +85,12 @@ function handleBrowserRequest(
   remixContext: EntryContext
 ) {
   return new Promise((resolve, reject) => {
-    let didError = false;
-
     const { pipe, abort } = renderToPipeableStream(
-      <RemixServer context={remixContext} url={request.url} />,
+      <RemixServer
+        context={remixContext}
+        url={request.url}
+        abortDelay={ABORT_DELAY}
+      />,
       {
         onShellReady() {
           const body = new PassThrough();
@@ -94,19 +100,18 @@ function handleBrowserRequest(
           resolve(
             new Response(body, {
               headers: responseHeaders,
-              status: didError ? 500 : responseStatusCode,
+              status: responseStatusCode,
             })
           );
 
           pipe(body);
         },
-        onShellError(err: unknown) {
-          reject(err);
+        onShellError(error: unknown) {
+          reject(error);
         },
         onError(error: unknown) {
-          didError = true;
-
           console.error(error);
+          responseStatusCode = 500;
         },
       }
     );

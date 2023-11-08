@@ -1,26 +1,34 @@
-# Peristyle - My 2023 Showcase Site
-## Project-A-Month for January
+# Welcome to Remix!
 
-This is my first of 12 projects in 2023, and serves as a showcase site for the future 11 and a much-needed personal portfolio site. In addition to being a nice place to show off projects and serve as a mini-blog, I wanted to highlight more of the process of each project with the inclusion of progress bars and project status. A stretch goal for this project is to also include basic CMS-like features, which includes authentication, page creation / editing, etc. Supabase will make some of things easier, but this will be more involved than the simple static site.
+- [Remix Docs](https://remix.run/docs)
 
-### Built With:
-- [Remix](remix.run)
-- [TailwindCSS](https://tailwindcss.com)
-- [Supabase](https://supabase.com)
+## Deployment
 
-### Running Locally
-If you'd like to use this project for your own purposes, here's how to get started with the basics:
+After having run the `create-remix` command and selected "Vercel" as a deployment target, you only need to [import your Git repository](https://vercel.com/new) into Vercel, and it will be deployed.
 
-- Clone the repo onto your local machine.
-- Set up a [Supabase](https://supabase.com/) project (for free!) to serve as the site's backend.
-- Create tables for `projects` and `updates` with columns that match the corresponding types in `app/models/projects.server.ts`.
-- Create a single `project` (can be a placeholder). This is useful later to verify that you can pull data from Supabase correctly.
-- Create a file called `.env` in the root directory and configure it with the following template:
-  ```
-    SUPABASE_URL=supabase-url-here
-    SUPABASE_PUBLIC_KEY=supabase-public-key-here
-    SUPABASE_SERVICE_KEY=supabase-service-key-here
-  ```
-- Run `npm install` to install dependencies.
-- Run `npm run dev` to start.
-- Navigate to `localhost:3000` (by default) to view your project.
+If you'd like to avoid using a Git repository, you can also deploy the directory by running [Vercel CLI](https://vercel.com/cli):
+
+```sh
+npm i -g vercel
+vercel
+```
+
+It is generally recommended to use a Git repository, because future commits will then automatically be deployed by Vercel, through its [Git Integration](https://vercel.com/docs/concepts/git).
+
+## Development
+
+To run your Remix app locally, make sure your project's local dependencies are installed:
+
+```sh
+npm install
+```
+
+Afterwards, start the Remix development server like so:
+
+```sh
+npm run dev
+```
+
+Open up [http://localhost:3000](http://localhost:3000) and you should be ready to go!
+
+If you're used to using the `vercel dev` command provided by [Vercel CLI](https://vercel.com/cli) instead, you can also use that, but it's not needed.
