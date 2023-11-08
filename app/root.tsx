@@ -11,6 +11,7 @@ import {
 
 import styles from "./tailwind.css"
 import MainHeader from './components/MainHeader'
+import LandingPage from './components/LandingPage'
 
 export const links: LinksFunction = () => [
   { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
@@ -30,10 +31,11 @@ export default function App() {
         <Links />
       </head>
       <body className="bg-gray-800 text-gray-100">
-        <div className="flex flex-col gap-5 font-['Cabin'] mx-auto max-w-[1000px]">
+        <LandingPage />
+        {/* <div className="flex flex-col gap-5 font-['Cabin'] mx-auto max-w-[1000px]">
           <MainHeader text="Conner Gillette" />
           <Outlet />
-        </div>
+        </div> */}
         <ScrollRestoration />
         <Scripts />
         <LiveReload />
