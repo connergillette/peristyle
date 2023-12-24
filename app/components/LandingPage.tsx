@@ -1,5 +1,10 @@
 import LightListItem from './LightListItem'
 import ListItem from './ListItem'
+import ProjectWindow from './ProjectWindow'
+
+import Eight from '~/assets/eight.png'
+import Lootsheet from '~/assets/lootsheet.png'
+import Hunt from '~/assets/hunt.png'
 
 export default function LandingPage() {
   return (
@@ -28,6 +33,11 @@ export default function LandingPage() {
         <LightListItem superheader="Abound" header="Senior Software Engineer" description="Expanding marketplace functionality." context="March 2022 - July 2022"/>
         <LightListItem superheader="G2 Web Services" header="Full-Stack Developer" description="Large-scale web scrapers." context="September 2019 - March 2022"/>
         <LightListItem superheader="Knowledge Anywhere" header="Software Developer (Contract)" description="Building QuickQuiz for Slack." context="December 2017 - December 2020"/>
+      </div>
+      <div className="flex w-full gap-4 max-md:flex-col py-4">
+        <ProjectWindow name="Lootsheet" link="https://lootsheet.vercel.app" description="AI-assisted note-taking tool for tabletop games." image={Lootsheet} />
+        <ProjectWindow name="Hunt" link="https://hunt-five.vercel.app" description="Job application tracking tool for when spreadsheets get cumbersome." image={Hunt} />
+        <ProjectWindow name="Eight" link="https://eightoclock.vercel.app" description="Dead-simple daily journaling tool." image={Eight} />
       </div>
       <div className="whitespace-nowrap flex flex-wrap justify-center gap-4 opacity-70 my-10 max-lg:my-4 w-full text-green-400">
         <span>JavaScript</span>
