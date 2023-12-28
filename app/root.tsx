@@ -30,7 +30,7 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body className="bg-gray-800 text-gray-100">
+      <body className="bg-gray-800 text-gray-100 overflow-hidden max-lg:overflow-y-scroll">
         <LandingPage />
         {/* <div className="flex flex-col gap-5 font-['Cabin'] mx-auto max-w-[1000px]">
           <MainHeader text="Conner Gillette" />

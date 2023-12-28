@@ -8,7 +8,7 @@ import Hunt from '~/assets/hunt.png'
 
 export default function LandingPage() {
   return (
-    <div className="flex flex-col mx-auto max-w-[1000px] gap-10 font-['Cabin'] px-10 mt-48 max-lg:mt-12">
+    <div className="flex flex-col mx-auto max-w-[1000px] gap-10 font-['Cabin'] px-10 mt-[5%] max-lg:mt-12">
       <div className="flex max-md:flex-col max-md:gap-4 w-full justify-center">
         <div className="flex flex-col w-full justify-center max-lg:text-center">
           <h1 className="text-5xl font-bold">Conner Gillette</h1>
