@@ -39,7 +39,7 @@ export default function LandingPage() {
         <ProjectWindow name="Hunt" link="https://hunt-five.vercel.app" description="Job application tracking tool for when spreadsheets get cumbersome." image={Hunt} />
         <ProjectWindow name="Eight" link="https://eightoclock.vercel.app" description="Dead-simple daily journaling tool." image={Eight} />
       </div>
-      <div className="whitespace-nowrap flex flex-wrap justify-center gap-4 opacity-70 my-10 max-lg:my-4 w-full text-green-400">
+      <div className="whitespace-nowrap flex flex-wrap justify-center gap-4 opacity-70 max-lg:my-4 w-full text-green-400">
         <span>JavaScript</span>
         <span>TypeScript</span>
         <span>React</span>
