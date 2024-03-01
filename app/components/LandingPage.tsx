@@ -15,7 +15,7 @@ export default function LandingPage() {
           <div className="flex max-md:flex-col max-md:gap-4 w-full justify-center">
             <div className="flex flex-col w-full justify-center max-lg:text-center">
               <h1 className="text-5xl max-lg:text-4xl font-bold">Conner Gillette</h1>
-              <h2 className="text-xl text-gray-400">Full-stack software engineer based in <span className="text-green-400">Sammamish, WA, USA.</span></h2>
+              <h2 className="text-xl text-gray-400">Full-stack software engineer based in <span className="text-green-400">Seattle, WA, USA.</span></h2>
             </div>
             <div className="flex gap-4 align-middle my-auto max-lg:justify-center">
               <a href="https://linkedin.com/in/connergillette" target="_blank" rel="noreferrer">
