@@ -59,6 +59,18 @@ export default function LandingPage() {
             <ProjectListItem name="Eight" link="https://eightoclock.vercel.app" description="Dead-simple daily journaling tool." />
           </div>
         </section>
+        <section>
+          <div className="flex flex-col w-full gap-4 max-md:flex-col p-10 max-lg:p-4">
+            <SectionHeader title="Certifications" />
+            <LightListItem superheader="Cloud Services" header="Amazon Web Services" description="Developer Associate" context="2021-2024"/>
+          </div>
+        </section>
+        <section>
+          <div className="flex flex-col w-full gap-4 max-md:flex-col p-10 max-lg:p-4">
+            <SectionHeader title="Education" />
+            <LightListItem superheader="Bachelor's" header="University of Washington Seattle" description="Geographic Information Systems / Informatics" context="2019"/>
+          </div>
+        </section>
       </div>
     </>
   )
