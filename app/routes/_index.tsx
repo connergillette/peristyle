@@ -7,7 +7,7 @@ import ImageGrid from '~/components/ImageGrid'
 import ListItem from '~/components/ListItem'
 import SectionHeader from '~/components/SectionHeader'
 
-import { supabase } from '~/supabase'
+// import { supabase } from '~/supabase'
 
 interface ActivityEvents {
   [key: string]: Event[]
@@ -20,36 +20,36 @@ export const meta: V2_MetaFunction = () => {
   ]
 }
 
-export async function loader () {
-  const eventsResponse = await supabase.from('events').select()
-  let events : any = {}
-  if (eventsResponse.error) {
-    console.error(eventsResponse.error)
-    return { error: eventsResponse.error }
-  } else {
-    for (const event of eventsResponse.data) {
-      if (events[event.activity_type]) {
-        events[event.activity_type].push(event)
-      } else {
-        events[event.activity_type] = [event]
-      }
-    }
-  }
+// export async function loader () {
+//   const eventsResponse = await supabase.from('events').select()
+//   let events : any = {}
+//   if (eventsResponse.error) {
+//     console.error(eventsResponse.error)
+//     return { error: eventsResponse.error }
+//   } else {
+//     for (const event of eventsResponse.data) {
+//       if (events[event.activity_type]) {
+//         events[event.activity_type].push(event)
+//       } else {
+//         events[event.activity_type] = [event]
+//       }
+//     }
+//   }
 
-  const imagesResponse = await supabase.from('images').select()
-  let images : any = {}
-  if (imagesResponse.error) {
-    console.error(imagesResponse.error)
-    return { error: imagesResponse.error }
-  } else {
-    images = imagesResponse.data
-  }
+//   const imagesResponse = await supabase.from('images').select()
+//   let images : any = {}
+//   if (imagesResponse.error) {
+//     console.error(imagesResponse.error)
+//     return { error: imagesResponse.error }
+//   } else {
+//     images = imagesResponse.data
+//   }
 
-  return { events, images }
-}
+//   return { events, images }
+// }
 
 export default function Index() {
-  const { events, images } = useLoaderData()
+  // const { events, images } = useLoaderData()
 
   return (
     <div className="flex flex-col gap-10 mb-10">
