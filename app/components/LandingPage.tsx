@@ -31,7 +31,7 @@ export default function LandingPage() {
             </div>
           </div>
           <div className="flex flex-col gap-4 w-full px-4">
-            <LightListItem superheader="Taro Health" header="Product Engineer" description="Building a healthcare system that makes sense." context="March 2024 - present"/>
+            <LightListItem superheader="Mending (formerly Taro Health)" header="Product Engineer" description="Building a healthcare system that makes sense." context="March 2024 - present"/>
             <LightListItem superheader="(freelance)" header="Full-Stack Web Development" description="Custom web app and design solutions." context="March 2022 - March 2024"/>
             <LightListItem superheader="Koji" header="Senior Software Engineer" description="Marketplace and user management." context="August 2022 - December 2022"/>
             <LightListItem superheader="Abound" header="Senior Software Engineer" description="Expanding marketplace functionality." context="March 2022 - July 2022"/>
